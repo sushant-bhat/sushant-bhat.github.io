@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta name="author" content="Sushant Bhat">
+		<meta name="description" content="Sushant Bhat's portfolio landing page">
+		<!-- TODO: Add meta for social media -->
 		<title>The Ant's Hat</title>
+		<link rel="icon" type="image/x-icon" href="images/favicon_io/favicon.ico">
 		<link rel="stylesheet" href="master.css">
 		<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway|Lato'>
 	</head>
@@ -62,10 +66,23 @@
 		<br>
 		<hr>
 		<footer>
-			<h4>Contact me</h4>
-			<a href="mailto:sushant.bhat.102@gmail.com?subject=BIG FAN!!&body=Loved your work" target="_blank">Email</a>
-			<a href="https://www.facebook.com/sushant.bhat.50" target="_blank">Facebook</a>
-			<a href="https://medium.com/@sushant.bhat.102" target="_blank">Medium</a>
+			<section>
+				<h4>Contact me</h4>
+				<a href="mailto:sushant.bhat.102@gmail.com?subject=BIG FAN!!&body=Loved your work" target="_blank">Email</a>
+				<a href="https://www.facebook.com/sushant.bhat.50" target="_blank">Facebook</a>
+				<a href="https://medium.com/@sushant.bhat.102" target="_blank">Medium</a>
+			</section>
+			<section>
+				<h4>Or send me a direct short message</h4>
+				<form method="post">
+					<label for="f_name">Name</label>
+					<input type="text" name="f_name" id="f_name" placeholder="First Name"><br>
+					<label for="l_name">Surname</label>
+					<input type="text" name="l_name" id="l_name" placeholder="Last Name"><br>
+					<textarea name="message" placeholder="Write your message here..."></textarea>
+					<input type="submit">
+				</form>
+			</section>
 		</footer>
 	</body>
 </html>
