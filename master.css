@@ -1,7 +1,7 @@
 body {
     background-color: #d3d3d3;
     font-family: Lato;
-    color: rgb(138, 130, 130);
+    color: rgb(43, 41, 41);
     /* border: dashed rgb(64, 114, 148); */
 }
 
@@ -22,6 +22,9 @@ p {
 
 table {
     border: 1px solid black;
+    text-align: center;
+    width: 80%;
+    margin: auto;
 }
 
 th {
@@ -29,7 +32,8 @@ th {
 }
 
 td {
-    border-right: 1px solid black;
+    border: 1px solid black;
+    width: 50%;
 }
 
 article {
