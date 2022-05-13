@@ -4,31 +4,58 @@
 }
 
 header {
-    color: white;
-    margin-top: 10px;
-    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+#logo {
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+#nav {
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+.nav-item {
+    margin-right: 2rem;
+    text-decoration: none;
+    color: black;
+}
+
+.nav-item:hover {
+    color: rgb(86, 112, 170);
+}
+
+.btn-primary {
+    padding: 10px;
+    background-color: bisque;
+    border: none;
+    border-radius: 2px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    box-shadow: 0px 1px 4px -2px black;
 }
 
 div {
-    color: white;
     text-align: center;
-    border: 2px solid black;
-    border-radius: 5px;
 }
 
-body {
-    width: 80%;
-    margin: auto;
-}
 
-#root {
+#grid-root-container {
     display: grid;
-    width: 100%;
-    gap: 10px;
-    grid-template-rows: 6rem repeat(5, 1fr) 2rem;
-    grid-template-columns: 2em 1fr 2em;
+    width: 80%;
+    margin: 20px auto;
+    gap: 50px;
+    grid-template-rows: repeat(5, 1fr) 2rem;
+    grid-template-columns: 2em minmax(0, 1fr) 2em;
     grid-template-areas: 
-    'header header header'
     'intro intro intro'
     'social-links about prof-links'
     'social-links exp prof-links'
@@ -37,53 +64,68 @@ body {
     'footer footer footer';
 }
 
-#logo {
-    background-color: #112B3C;
+#grid-form-container {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    'contact-details contact-msg'
+    'send-button send-button';
 }
 
-#nav {
-    background-color: #B689C0;
+.grid-projects-container {
+    display: grid;
+    gap: 50px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+section {
+    box-shadow: 0px 0px 20px -2px rgba(0,0,0,0.25);
+    border-radius: 10px;
 }
 
 #social-links {
-    background-color: #6A67CE;
     grid-area: social-links;
 }
 
 #prof-links {
-    background-color: #6A67CE;
     grid-area: prof-links;
 }
 
 .intro {
-    background-color: #251D3A;
     grid-area: intro;
 }
 
 #about {
-    background-color: #2A2550;
     grid-area: about;
 }
 
 #exp {
-    background-color: #E04D01;
     grid-area: exp;
 }
 
 #proj {
-    background-color: #FF7700;
     grid-area: proj;
 }
 
 #contact {
-    color: black;
-    background-color: #EFEFEF;
     grid-area: contact;
+}
+
+#contact-details {
+    grid-area: contact-details;
+}
+
+#contact-msg {
+    grid-area: contact-msg;
+}
+
+#send-button {
+    grid-area: send-button;
 }
 
 footer {
     grid-area: footer;
     text-align: center;
     margin-bottom: 5px;
-    color: black;
 }
