@@ -46,6 +46,7 @@ header {
     text-decoration: none;
     color: var(--clr-primary);
     font-weight: bold;
+    transition: color 300ms;
 }
 
 .nav-item:hover {
@@ -114,6 +115,7 @@ div {
 
 .grid-projects-container li {
     filter: blur(5px);
+    transition: transform 300ms, filter 300ms;
 }
 
 .grid-projects-container li:hover {
@@ -122,11 +124,54 @@ div {
     filter: blur(0px);
 }
 
+.grid-intro-container {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.grid-intro-container img, .grid-intro-container p {
+    grid-row: 1/-1;
+}
+
+.grid-intro-container img {
+    background-color: var(--clr-secondary);
+    grid-column: 2/-1;
+}
+
+.grid-intro-container p {
+    grid-column: 1/3;
+    font-size: larger;
+    padding: 5rem;
+    background-color: var(--clr-secondary);
+    box-shadow: 0px 0px 40px -2px var(--clr-secondary-shadow);
+}
+
+.grid-about-container {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.grid-about-container img {
+    background-color: var(--clr-secondary);
+    grid-column: 1/4;
+    grid-row: 1/-1;
+}
+
+.grid-about-container > div {
+    grid-column: 3/-1;
+    grid-row: 1/-1;
+    font-size: larger;
+    padding: 5rem;
+    background-color: var(--clr-secondary);
+    box-shadow: 0px 0px 40px -2px var(--clr-secondary-shadow);
+}
+
 #social-links {
     grid-area: social-links;
     display: flex;
     flex-direction: column;
-    justify-content: end;
     gap: 30px;
 }
 
@@ -134,7 +179,6 @@ div {
     grid-area: prof-links;
     display: flex;
     flex-direction: column;
-    justify-content: end;
     gap: 30px;
 }
 
@@ -173,9 +217,10 @@ div {
 
 #send-button input[type="submit"] {
     max-width: 20rem;
-    min-height: 4rem;
+    min-height: 3rem;
     font-size: 20px;
     font-weight: bold;
+    padding: 15px;
 }
 
 footer {

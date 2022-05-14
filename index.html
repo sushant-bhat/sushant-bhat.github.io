@@ -35,18 +35,20 @@
 				<a href="https://medium.com/@sushant.bhat.102" target="_blank" rel="noopener noreferrer"><img src="https://picsum.photos/30" alt="Medium"></a>
 				<a href="mailto:sushant.bhat.102@gmail.com"><img src="https://picsum.photos/30" alt="Gmail"></a>
 			</aside>
-			<section class="intro">
+			<section class="intro grid-intro-container">
 				<img src="https://picsum.photos/800/800" alt="Intro card">
-				<p>Senior Backend engineer, budding Indie Game developer, budding Web developer, budding....huh.....Flower?</p>
+				<p>Senior Backend engineer, budding Indie Game developer, budding Web developer, budding....huh.....Flower? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur distinctio tempora dolorum atque? Excepturi unde, consequuntur non ex sapiente ullam saepe eos tempore? Recusandae explicabo, repudiandae illo dignissimos facilis deleniti!</p>
 			</section>
-			<section id="about">
+			<section id="about" class="grid-about-container">
 				<!--About me card-->
-				<h2>About Me</h2>
 				<img src="https://picsum.photos/400" alt="Sushant Bhat">
-				<p>
-					Working as an IT professional since x years now. Software engineer by the day, game developer by night, or rather by the evening. Getting my hands dirty 
-					in full stack now.
-				</p>
+				<div>
+					<h2>About Me</h2>
+					<p>
+						Working as an IT professional since x years now. Software engineer by the day, game developer by night, or rather by the evening. Getting my hands dirty 
+						in full stack now.
+					</p>
+				</div>
 			</section>
 			<section id="exp">
 				<!--Experience card-->
@@ -55,18 +57,18 @@
 				<ul type="none" class="grid-experience-container">
 					<li>
 						<h3>SDE III@Walmart</h3>
-						<img src="https://picsum.photos/200" alt="Project 1">
-						<p>Something about company 1</p>
+						<img src="images/walmart-logo.jpg" alt="Walmart Global Tech">
+						<p>Back end engineer in Search team. Working in Spring boot.</p>
 					</li>
 					<li>
 						<h3>SDE II@Soroco</h3>
-						<img src="https://picsum.photos/200" alt="Project 1">
-						<p>Something about company 2</p>
+						<img src="images/soroco-logo.png"Soroco Pvt. Ltd.">
+						<p>Back end engineer in UI Automation team. Working in Python.</p>
 					</li>
 					<li>
 						<h3>SDE@Samsung R&D</h3>
-						<img src="https://picsum.photos/200" alt="Project 1">
-						<p>Something about company 3</p>
+						<img src="images/samsung-logo.png" alt="Samsung Research insitute">
+						<p>Backend Engineer in the Gallery Multimedia team. Working in Android.</p>
 					</li>
 				</ul>
 			</section>
@@ -149,7 +151,7 @@
 					</div>
 					<div id="contact-msg">
 						<label for="email_msg">Message*</label><br>
-						<textarea name="email_msg" required id="email_msg" cols=90em rows="10" placeholder="Be kind please!!" style="color: #222831;"></textarea>
+						<textarea name="email_msg" required id="email_msg" rows="10" placeholder="Be kind please!!" style="color: #222831;"></textarea>
 					</div>
 					<div id="send-button">
 						<input type="submit" value="Send" class="btn-primary">
