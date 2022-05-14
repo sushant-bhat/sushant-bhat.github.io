@@ -75,9 +75,10 @@ div {
 
 #grid-root-container {
     display: grid;
-    width: 70%;
+    max-width: 70%;
     margin: 20px auto;
     gap: 50px;
+    row-gap: 100px;
     grid-template-rows: 55rem 40rem 30rem 100rem 30rem 2rem;
     grid-template-columns: 2em minmax(0, 1fr) 2em;
     grid-template-areas: 
@@ -111,8 +112,14 @@ div {
     border-radius: 10px;
 }
 
+.grid-projects-container li {
+    filter: blur(5px);
+}
+
 .grid-projects-container li:hover {
     transform: scale(1.1);
+    box-shadow: 0px 0px 40px -2px var(--clr-secondary-shadow);
+    filter: blur(0px);
 }
 
 #social-links {
@@ -165,8 +172,8 @@ div {
 }
 
 #send-button input[type="submit"] {
-    width: 20rem;
-    height: 4rem;
+    max-width: 20rem;
+    min-height: 4rem;
     font-size: 20px;
     font-weight: bold;
 }
