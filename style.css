@@ -207,19 +207,27 @@ header {
 }
 
 #social-links {
-    right: 2rem;
+    right: 0;
 }
 
 #prof-links {
-    left: 2rem;
+    left: 0;
 }
 
-#social-links > a, #prof-links > a {
+#prof-links .expandable-link::before {
+    content: '-------';
+}
+
+#social-links .expandable-link::after {
+    content: '-------';
+}
+
+.expandable-link a > img {
     transition: transform ease-out 150ms;
 }
 
-#social-links > a:hover, #prof-links > a:hover {
-    transform: scale(1.1);
+.expandable-link a > img:hover {
+    transform: scale(1.5);
 }
 
 
