@@ -1,17 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto,Raleway');
+
 :root {
-    --clr-primary: #222831;
-    --clr-primary-shadow: #22283153;
-    --clr-secondary: #393E46;
-    --clr-secondary-shadow: #00acb53e;
-    --clr-accent-green: #00ADB5;
-    --clr-accent-green-shadow: #00acb57e;
-    --clr-accent-white: #EEEEEE;
+    --clr-primary: #EEEDE7;
+    --clr-primary-shadow: #EEEDE7;
+    --clr-secondary: #000000;
+    --clr-secondary-shadow: #000000;
+    --clr-accent: #868B8E;
+    --clr-accent-shadow: #B9B7BD7e;
+    --clr-font-dark: #000;
+    --clr-font-light: #fff;
 }
 
 * {
     box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: var(--clr-accent-white);
+    font-family: "Roboto", sans-serif;
+}
+
+.font-dark {
+    color: var(--clr-font-dark);
+}
+
+.font-light {
+    color: var(--clr-font-light);
+}
+
+.font-accent {
+    color: var(--clr-accent);
 }
 
 body {
@@ -20,12 +34,11 @@ body {
 
 a {
     text-decoration: none;
-    color: var(--clr-accent-green);
 }
 
 h2 {
     padding: 10px;
-    border-bottom: 2px dotted var(--clr-accent-green);
+    border-bottom: 2px dotted var(--clr-accent);
 }
 
 header {
@@ -36,8 +49,8 @@ header {
     z-index: 10;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0px 5px 10px -2px var(--clr-accent-green-shadow);
-    background-color: var(--clr-accent-green);
+    box-shadow: 0px 5px 10px -2px var(--clr-accent-shadow);
+    background-color: var(--clr-secondary);
 }
 
 #logo {
@@ -51,33 +64,32 @@ header {
 }
 
 .nav-item {
-    margin-right: 2rem;
+    color: var(--clr-font-light);
+    margin-right: 4rem;
+    font-size: large;
     text-decoration: none;
-    color: var(--clr-primary);
     font-weight: bold;
-    transition: color, text-shadow 300ms;
+    transition: color, text-shadow 150ms;
 }
 
 .nav-item:hover {
     text-shadow: 0 0 10px currentColor;
-    color: var(--clr-accent-white);
 }
 
 .btn-primary {
     padding: 10px;
-    color: var(--clr-accent-white);
-    background-color: var(--clr-accent-green);
-    border: 1px solid var(--clr-accent-white);
+    background-color: inherit;
+    border: 1px solid currentColor;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
 }
 
 .btn-primary:hover {
-    box-shadow: 0px 10px 10px -2px var(--clr-primary-shadow);
+    color: var(--clr-font-dark);
+    box-shadow: 0px 0px 0px 0px var(--clr-font-light);
     text-shadow: none;
-    color: var(--clr-primary);
-    background-color: var(--clr-accent-white);
+    background-color: var(--clr-primary);
 }
 
 #grid-root-container {
@@ -99,7 +111,7 @@ header {
 
 #grid-form-container {
     display: grid;
-    width: 70%;
+    width: 80%;
     gap: 6rem;
     margin-top: 4rem;
     margin-inline: auto;
@@ -195,11 +207,19 @@ header {
 }
 
 #social-links {
-    left: 8rem;
+    right: 2rem;
 }
 
 #prof-links {
-    right: 8rem;
+    left: 2rem;
+}
+
+#social-links > a, #prof-links > a {
+    transition: transform ease-out 150ms;
+}
+
+#social-links > a:hover, #prof-links > a:hover {
+    transform: scale(1.1);
 }
 
 
@@ -240,11 +260,10 @@ header {
 }
 
 #send-button input[type="submit"] {
-    min-width: 20em;
     min-height: 3rem;
     font-size: 20px;
     font-weight: bold;
-    padding: 15px;
+    padding: 1em;
 }
 
 .input-text {
@@ -254,7 +273,7 @@ header {
     background-color: var(--clr-secondary);
     border: none;
     font-size: 1rem;
-    border-bottom: 2px solid var(--clr-accent-green);
+    border-bottom: 2px solid var(--clr-accent);
 }
 
 footer {
