@@ -23,8 +23,17 @@ a {
     color: var(--clr-accent-green);
 }
 
+h2 {
+    padding: 10px;
+    border-bottom: 2px dotted var(--clr-accent-green);
+}
+
 header {
     display: flex;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 10;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0px 5px 10px -2px var(--clr-accent-green-shadow);
@@ -69,44 +78,51 @@ header {
     background-color: var(--clr-accent-white);
 }
 
-div {
-    text-align: center;
-}
-
-
 #grid-root-container {
     display: grid;
     max-width: 70%;
     margin: 20px auto;
     gap: 50px;
     row-gap: 100px;
-    grid-template-rows: 55rem 40rem 30rem 100rem 30rem 2rem;
+    grid-template-rows: repeat(3, 70rem) 100rem 50rem 6rem;
     grid-template-columns: 2em minmax(0, 1fr) 2em;
     grid-template-areas: 
     'intro intro intro'
-    'social-links about prof-links'
-    'social-links exp prof-links'
-    'social-links proj prof-links'
-    'social-links contact prof-links'
+    '. about .'
+    '. exp .'
+    '. proj .'
+    '. contact .'
     'footer footer footer';
 }
 
 #grid-form-container {
     display: grid;
-    gap: 15px;
-    grid-template-columns: 1fr 1fr;
+    width: 70%;
+    gap: 6rem;
+    margin-top: 4rem;
+    margin-inline: auto;
+    padding: 2rem;
+    place-content: center;
+    box-shadow: 0px 0px 20px -2px var(--clr-secondary-shadow);
+    background-color: var(--clr-secondary);
+    grid-template-columns: repeat(6, 1fr);
     grid-template-areas: 
-    'contact-details contact-msg'
-    'send-button send-button';
+    '. contact-details contact-details contact-details contact-details .' 
+    '. contact-msg contact-msg contact-msg contact-msg .'
+    '. send-button send-button send-button send-button .';
+}
+
+#grid-form-container label {
+    font-size: 1.5rem;
 }
 
 .grid-projects-container, .grid-experience-container {
     display: grid;
-    gap: 50px;
+    gap: 4rem;
     grid-template-columns: repeat(3, 1fr);
 }
 
-.grid-projects-container li, .grid-experience-container li, #contact-msg {
+.grid-projects-container li, .grid-experience-container li {
     padding: 10px;
     box-shadow: 0px 0px 20px -2px var(--clr-secondary-shadow);
     background-color: var(--clr-secondary);
@@ -168,18 +184,20 @@ div {
     box-shadow: 0px 0px 40px -2px var(--clr-secondary-shadow);
 }
 
-#social-links {
-    grid-area: social-links;
+#social-links, #prof-links {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    position: fixed;
+    bottom: 15rem;
+}
+
+#social-links {
+    left: 12rem;
 }
 
 #prof-links {
-    grid-area: prof-links;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+    right: 12rem;
 }
 
 
@@ -205,6 +223,9 @@ div {
 
 #contact-details {
     grid-area: contact-details;
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 #contact-msg {
@@ -213,18 +234,28 @@ div {
 
 #send-button {
     grid-area: send-button;
+    margin-inline: auto;
 }
 
 #send-button input[type="submit"] {
-    max-width: 20rem;
+    min-width: 30em;
     min-height: 3rem;
     font-size: 20px;
     font-weight: bold;
     padding: 15px;
 }
 
+.input-text {
+    width: 100%;
+    margin-block: 1rem;
+    padding: 1rem;
+    background-color: var(--clr-secondary);
+    border: none;
+    font-size: 1rem;
+    border-bottom: 2px solid var(--clr-accent-green);
+}
+
 footer {
     grid-area: footer;
     text-align: center;
-    margin-bottom: 5px;
 }

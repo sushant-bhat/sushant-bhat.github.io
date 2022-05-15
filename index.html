@@ -22,19 +22,19 @@
 				<button href="docs/Sushant Bhat.pdf" class="nav-item btn-primary" download>Resume</button>
 			</nav>
 		</header>
+		<aside id="social-links">
+			<a href="https://www.instagram.com/ant_hat/" target="_blank" rel="noopener noreferrer"><img src="https://picsum.photos/30" alt="Insta"></a>
+			<a href="https://www.facebook.com/sushant.bhat.50" target="_blank" rel="noopener noreferrer"><img src="https://picsum.photos/30" alt="FB"></a>
+			<a href="https://twitter.com/SoShantButNoisy" target="_blank" rel="noopener noreferrer"><img src="https://picsum.photos/30" alt="Twitter"></a>
+		</aside>
+		<aside id="prof-links">
+			<!--Professional links LinkedIn, Github, GMail-->
+			<a href="https://www.linkedin.com/in/sushant-bhat-48846b103/" target="_blank" rel="noopener noreferrer"><img src="https://picsum.photos/30" alt="LinkedIn"></a>
+			<a href="https://github.com/sushant-bhat" target="_blank" rel="noopener noreferrer"><img src="https://picsum.photos/30" alt="Github"></a>
+			<a href="https://medium.com/@sushant.bhat.102" target="_blank" rel="noopener noreferrer"><img src="https://picsum.photos/30" alt="Medium"></a>
+			<a href="mailto:sushant.bhat.102@gmail.com"><img src="https://picsum.photos/30" alt="Gmail"></a>
+		</aside>
 		<div id="grid-root-container">
-			<aside id="social-links">
-				<a href="https://www.instagram.com/ant_hat/" target="_blank" rel="noopener noreferrer"><img src="https://picsum.photos/30" alt="Insta"></a>
-				<a href="https://www.facebook.com/sushant.bhat.50" target="_blank" rel="noopener noreferrer"><img src="https://picsum.photos/30" alt="FB"></a>
-				<a href="https://twitter.com/SoShantButNoisy" target="_blank" rel="noopener noreferrer"><img src="https://picsum.photos/30" alt="Twitter"></a>
-			</aside>
-			<aside id="prof-links">
-				<!--Professional links LinkedIn, Github, GMail-->
-				<a href="https://www.linkedin.com/in/sushant-bhat-48846b103/" target="_blank" rel="noopener noreferrer"><img src="https://picsum.photos/30" alt="LinkedIn"></a>
-				<a href="https://github.com/sushant-bhat" target="_blank" rel="noopener noreferrer"><img src="https://picsum.photos/30" alt="Github"></a>
-				<a href="https://medium.com/@sushant.bhat.102" target="_blank" rel="noopener noreferrer"><img src="https://picsum.photos/30" alt="Medium"></a>
-				<a href="mailto:sushant.bhat.102@gmail.com"><img src="https://picsum.photos/30" alt="Gmail"></a>
-			</aside>
 			<section class="intro grid-intro-container">
 				<img src="https://picsum.photos/800/800" alt="Intro card">
 				<p>Senior Backend engineer, budding Indie Game developer, budding Web developer, budding....huh.....Flower? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur distinctio tempora dolorum atque? Excepturi unde, consequuntur non ex sapiente ullam saepe eos tempore? Recusandae explicabo, repudiandae illo dignissimos facilis deleniti!</p>
@@ -142,16 +142,18 @@
 				<p>Ughh....that sounded better in my head. Just drop some sweet words in my inbox and make my day!</p>
 				<form action="" method="post" id="grid-form-container">
 					<div id="contact-details">
-						<label for="msg_name">Name</label><br>
-						<input type="text" name="msg_name" id="msg_name">
-						<br>
-						<label for="msg_email">Email*</label><br>
-						<input type="email" required name="msg_email" id="msg_email">
-						<br>
+						<div>
+							<label for="msg_name">Name</label><br>
+							<input type="text" name="msg_name" id="msg_name" class="input-text">
+						</div>
+						<div>
+							<label for="msg_email">Email*</label>
+							<input type="email" required name="msg_email" id="msg_email" class="input-text">
+						</div>
 					</div>
 					<div id="contact-msg">
-						<label for="email_msg">Message*</label><br>
-						<textarea name="email_msg" required id="email_msg" rows="10" placeholder="Be kind please!!" style="color: #222831;"></textarea>
+						<label for="email_msg">Message (max 140 characters)*</label>
+						<textarea name="email_msg" required id="email_msg" maxlength="140" rows="3" placeholder="Be kind please!!" class="input-text"></textarea>
 					</div>
 					<div id="send-button">
 						<input type="submit" value="Send" class="btn-primary">
@@ -162,6 +164,7 @@
 				<hr>
 				<!--Designed and implementation by Sushant Bhat-->
 				<p>&#169;Designed and made by Sushant Bhat</p>
+				<a href="https://github.com/sushant-bhat/sushant-bhat.github.io" target="_blank">Github</a>
 			</footer>
 		</div>
 	</body>
