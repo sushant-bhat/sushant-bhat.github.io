@@ -55,10 +55,11 @@ header {
     text-decoration: none;
     color: var(--clr-primary);
     font-weight: bold;
-    transition: color 300ms;
+    transition: color, text-shadow 300ms;
 }
 
 .nav-item:hover {
+    text-shadow: 0 0 10px currentColor;
     color: var(--clr-accent-white);
 }
 
@@ -74,6 +75,7 @@ header {
 
 .btn-primary:hover {
     box-shadow: 0px 10px 10px -2px var(--clr-primary-shadow);
+    text-shadow: none;
     color: var(--clr-primary);
     background-color: var(--clr-accent-white);
 }
@@ -105,11 +107,11 @@ header {
     place-content: center;
     box-shadow: 0px 0px 20px -2px var(--clr-secondary-shadow);
     background-color: var(--clr-secondary);
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(8, 1fr);
     grid-template-areas: 
-    '. contact-details contact-details contact-details contact-details .' 
-    '. contact-msg contact-msg contact-msg contact-msg .'
-    '. send-button send-button send-button send-button .';
+    '. contact-details contact-details contact-details contact-details contact-details contact-details .' 
+    '. contact-msg contact-msg contact-msg contact-msg contact-msg contact-msg .'
+    '. . send-button send-button send-button send-button . .';
 }
 
 #grid-form-container label {
@@ -187,17 +189,17 @@ header {
 #social-links, #prof-links {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 4rem;
     position: fixed;
     bottom: 15rem;
 }
 
 #social-links {
-    left: 12rem;
+    left: 8rem;
 }
 
 #prof-links {
-    right: 12rem;
+    right: 8rem;
 }
 
 
@@ -238,7 +240,7 @@ header {
 }
 
 #send-button input[type="submit"] {
-    min-width: 30em;
+    min-width: 20em;
     min-height: 3rem;
     font-size: 20px;
     font-weight: bold;
