@@ -8,7 +8,7 @@
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
-		<header>
+		<header class="box-shadow">
 			<!--Logo and Nav bar-->
 			<div id="logo">
 				<a href="index.html"><img src="https://picsum.photos/50?grayscale" alt="Logo"></a>
@@ -167,7 +167,7 @@
 					</li>
 					<li id="project-2" class="card">
 						<a href="https://github.com/sushant-bhat/Batwing-Rogue" target="_blank" class="font-dark">
-							<img src="images/projects-bg.jpg" alt="Bat Wing Unity 3D Game">
+							<img src="images/projects-bg.jpg" width="100%" alt="Bat Wing Unity 3D Game">
 							<h2>Bat Wing Assault</h2>
 							<p>A 3D Rail Shooter with the premise of an alien attack on Gotham city. And only one man can save the day - A man who dresses like the Bat.</p>
 							<a href="https://github.com/sushant-bhat/Batwing-Rogue" target="_blank">Github</a>
@@ -178,8 +178,7 @@
 							<img src="images/floppy-bird-ss.png" width="100%" alt="Floppy Bird Unity 2D Game">
 							<h2>Floppy Bird</h2>
 							<p>A clone of Flappy Bird game made as part of a challenge to make a complete game in 1 day.</p>
-							<p class="font-light"><a href="https://github.com/sushant-bhat/FloppyBird" target="_blank">Github</a> | 2D | Unity</p>
-							
+							<a href="https://github.com/sushant-bhat/FloppyBird" target="_blank">Github</a>	
 						</a>
 					</li>
 				</ul>
@@ -209,27 +208,27 @@
 					</li>
 				</ul>
 			</section>
-			<section id="contact">
+			<section id="contact" class="font-light">
 				<!--Contact card-->
-				<h1 class="font-light">Wanna take this to the next level?</h1>
-				<p class="font-light">Ughh....that sounded better in my head. Just drop some sweet words in my inbox and make my day!</p>
+				<h2>Wanna take this to the next level?</h2>
+				<p>Ughh....that sounded better in my head. Just drop some sweet words in my inbox and make my day!</p>
 				<form action="" method="post" id="grid-form-container" class="card">
 					<div id="contact-details">
 						<div>
 							<label for="msg_name">Name</label><br>
-							<input type="text" name="msg_name" id="msg_name" class="input-text font-light">
+							<input type="text" name="msg_name" id="msg_name" class="input-text">
 						</div>
 						<div>
 							<label for="msg_email">Email*</label>
-							<input type="email" required name="msg_email" id="msg_email" class="input-text font-light">
+							<input type="email" required name="msg_email" id="msg_email" class="input-text">
 						</div>
 					</div>
 					<div id="contact-msg">
 						<label for="email_msg">Message (max 140 characters)*</label>
-						<textarea name="email_msg" required id="email_msg" maxlength="140" rows="3" placeholder="Be kind please!!" class="input-text font-light"></textarea>
+						<textarea name="email_msg" required id="email_msg" maxlength="140" rows="3" placeholder="Be kind please!!" class="input-text"></textarea>
 					</div>
 					<div id="send-button">
-						<input type="submit" value="Send" class="btn-primary font-dark">
+						<input type="submit" value="Send" class="btn-primary">
 					</div>
 				</form>
 			</section>
