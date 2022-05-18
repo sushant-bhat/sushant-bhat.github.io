@@ -7,6 +7,7 @@
     --clr-white-trans: #fffff27c;
     --clr-black: #171717;
     --clr-black-trans: #1b1b1bc0;
+    --clr-accent: #F27900;
 }
 
 *,
@@ -24,12 +25,25 @@
     color: var(--clr-white);
 }
 
-body {
+.box-shadow {
+    box-shadow: 0px 5px 10px -2px currentColor;
+}
+
+.card {
+    padding: 2em 2em;
+    box-shadow: 0 0 1rem 0 var(--clr-white-trans);
     background-color: var(--clr-white);
+    color: var(--clr-black);
+    border-radius: 1rem;
+}
+
+body {
+    background-color: var(--clr-black);
 }
 
 a {
     text-decoration: none;
+    color: var(--clr-accent);
 }
 
 h2 {
@@ -46,20 +60,18 @@ h2 {
 }
 
 .btn-primary:hover {
-    color: var(--clr-black);
-    box-shadow: 0px 0px 0px 0px var(--clr-white);
+    color: var(--clr-white);
+    box-shadow: 0px 0px 0px 0px var(--clr-black);
     text-shadow: none;
-    background-color: var(--clr-white);
+    background-color: var(--clr-black);
 }
 
 #grid-root-container {
     display: grid;
     max-width: 70%;
-    margin: 20px auto;
-    gap: 50px;
-    row-gap: 100px;
-    grid-template-rows: repeat(3, 70rem) 150rem 50rem 6rem;
-    grid-template-columns: 2em minmax(0, 1fr) 2em;
+    margin: 2rem auto;
+    grid-template-rows: repeat(2, 70rem) 80rem 150rem 70rem 6rem;
+    grid-template-columns: 2rem minmax(0, 1fr) 2rem;
     grid-template-areas: 
     'intro intro intro'
     '. about .'
@@ -80,22 +92,21 @@ header {
     z-index: 2;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0px 5px 10px -2px currentColor;
-    background-color: var(--clr-black);
+    background-color: var(--clr-white);
 }
 
 #logo {
-    margin-top: 5px;
-    margin-left: 10px;
+    margin-top: 0.25em;
+    margin-left: 0.25em;
 }
 
 #nav {
-    margin-right: 10px;
-    margin-bottom: 5px;
+    margin-right: 1em;
+    margin-block: auto;
 }
 
 .nav-item {
-    color: var(--clr-white);
+    color: var(--clr-black);
     margin-right: 4rem;
     font-size: large;
     text-decoration: none;
@@ -124,16 +135,11 @@ header {
 }
 
 .grid-intro-container img {
-    background-color: var(--clr-black);
     grid-column: 2/-1;
 }
 
 .grid-intro-container div {
     grid-column: 1/4;
-    font-size: larger;
-    padding: 5rem;
-    background-color: var(--clr-black-trans);
-    box-shadow: 0px 0px 40px -2px currentColor
 }
 
 #about {
@@ -163,9 +169,6 @@ header {
     grid-column: 3/-1;
     grid-row: 1/-1;
     font-size: larger;
-    padding: 5rem;
-    background-color: var(--clr-black-trans);
-    box-shadow: 0px 0px 40px -2px currentColor;
 }
 
 .grid-projects-done-container, 
@@ -176,14 +179,14 @@ header {
     grid-template-columns: repeat(2, 1fr);
 }
 
-.grid-projects-done-container > li, 
+/* .grid-projects-done-container > li, 
 .grid-projects-progress-container > li, 
 .grid-experience-container > li {
     padding: 10px;
     box-shadow: 0px 0px 20px -2px var(--clr-black-trans);
     background-color: var(--clr-black-trans);
     border-radius: 10px;
-}
+} */
 
 .grid-projects-done-container li, 
 .grid-projects-progress-container li {
@@ -207,13 +210,9 @@ header {
 #grid-form-container {
     display: grid;
     width: 80%;
-    gap: 6rem;
-    margin-top: 4rem;
+    row-gap: 10em;
     margin-inline: auto;
-    padding: 2rem;
-    place-content: center;
-    box-shadow: 0px 0px 20px -2px currentColor;
-    background-color: var(--clr-black-trans);
+    justify-content: center;
     grid-template-columns: repeat(8, 1fr);
     grid-template-areas: 
     '. contact-details contact-details contact-details contact-details contact-details contact-details .' 
@@ -232,7 +231,7 @@ header {
 #contact-details {
     grid-area: contact-details;
     display: grid;
-    gap: 4rem;
+    gap: 6em;
     grid-template-columns: repeat(2, 1fr);
 }
 
@@ -245,21 +244,21 @@ header {
     margin-inline: auto;
 }
 
-#send-button input[type="submit"] {
+/* #send-button input[type="submit"] {
     min-height: 3rem;
     font-size: 20px;
     font-weight: bold;
     padding: 1em;
-}
+} */
 
 .input-text {
     width: 100%;
     margin-block: 1rem;
-    padding: 1rem;
+    padding: 1em;
+    color: var(--clr-black);
     background-color: inherit;
     border: none;
-    font-size: 1rem;
-    border-bottom: 2px solid currentColor;
+    border-bottom: 2px solid var(--clr-black-trans);
 }
 
 .input-text:focus {
