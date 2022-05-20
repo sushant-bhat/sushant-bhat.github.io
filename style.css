@@ -311,6 +311,12 @@ footer {
 
 /*Move side links at around 700px and change body size to occupy 90% around 600px*/
 @media (max-width: 1200px) {
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
     #grid-root-container {
         margin: 2rem auto;
         grid-template-columns: 1fr;
@@ -323,15 +329,18 @@ footer {
         'footer';
     }
 
-    .grid-intro-container img,
-    .grid-intro-container div {
-        grid-column: 1/-1;
+    .grid-intro-container {
+        display: block;
+    }
+
+    .grid-about-container {
+        display: block;
     }
 
     .grid-projects-done-container, 
     .grid-projects-progress-container, 
     .grid-experience-container {
-        grid-template-columns: none;
+        grid-template-columns: 1fr;
     }
 
     #grid-form-container {
