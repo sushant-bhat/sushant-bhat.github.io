@@ -61,7 +61,16 @@ img {
 
 h2 {
     padding-bottom: 1em;
-    border-bottom: 0.1em solid var(--clr-accent);
+}
+
+h3 {
+    margin: 1em;
+}
+
+.side-title {
+    writing-mode: sideways-lr;
+    text-align: right;
+    color: var(--clr-white-trans);
 }
 
 .btn-primary {
@@ -82,17 +91,18 @@ h2 {
 
 #grid-root-container {
     display: grid;
-    width: min(70%, 1000px);
+    width: min(70%, 62rem);
     margin: 2rem auto;
     row-gap: 1rem;
-    grid-template-rows: repeat(2, 1fr) 1.5fr 3fr 1fr 0.1fr;
+    grid-template-rows: repeat(2, 1fr) repeat(3, 1.5fr) 1fr 0.1fr;
     grid-template-columns: 0.1fr 1fr 0.1fr;
     grid-template-areas: 
     'intro intro intro'
     '. about .'
-    '. exp .'
-    '. proj .'
-    '. contact .'
+    'exp-title  exp .'
+    'proj-done-title proj-done .'
+    'proj-progress-title proj-progress .'
+    'contact-title contact .'
     'footer footer footer';
 }
 
@@ -100,6 +110,7 @@ h2 {
 header {
     scroll-snap-align: start;
 }
+
 
 /* Header section */
 
@@ -170,8 +181,24 @@ header {
     grid-area: exp;
 }
 
-#proj {
-    grid-area: proj;
+#exp-title {
+    grid-area: exp-title;
+}
+
+#proj-done {
+    grid-area: proj-done;
+}
+
+#proj-done-title {
+    grid-area: proj-done-title;
+}
+
+#proj-progress {
+    grid-area: proj-progress;
+}
+
+#proj-progress-title {
+    grid-area: proj-progress-title;
 }
 
 .grid-about-container {
@@ -239,6 +266,10 @@ header {
     grid-area: contact;
 }
 
+#contact-title {
+    grid-area: contact-title;
+}
+
 #contact-details {
     grid-area: contact-details;
     display: grid;
@@ -254,13 +285,6 @@ header {
     grid-area: send-button;
     margin-inline: auto;
 }
-
-/* #send-button input[type="submit"] {
-    min-height: 3rem;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 1em;
-} */
 
 .input-text {
     width: 100%;
@@ -324,7 +348,7 @@ footer {
 /*Media queries*/
 
 /*Move side links at around 700px and change body size to occupy 90% around 600px*/
-@media (max-width: 1200px) {
+@media (max-width: 75em) {
     ul {
         list-style-type: none;
         margin: 0;
@@ -343,7 +367,8 @@ footer {
         'intro'
         'about'
         'exp'
-        'proj'
+        'proj-done'
+        'proj-progress'
         'contact'
         'footer';
     }
@@ -382,7 +407,7 @@ footer {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 38em) {
     #grid-root-container {
         min-width: max(90%, 320px);
         margin: 2rem auto;
