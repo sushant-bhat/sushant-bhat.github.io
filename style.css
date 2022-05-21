@@ -84,6 +84,7 @@ h2 {
     display: grid;
     width: min(70%, 1000px);
     margin: 2rem auto;
+    row-gap: 1rem;
     grid-template-rows: repeat(2, 1fr) 1.5fr 3fr 1fr 0.1fr;
     grid-template-columns: 0.1fr 1fr 0.1fr;
     grid-template-areas: 
@@ -95,7 +96,8 @@ h2 {
     'footer footer footer';
 }
 
-#grid-root-container > * {
+#grid-root-container > *,
+header {
     scroll-snap-align: start;
 }
 
