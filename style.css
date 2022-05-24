@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
 
 /* Global section */
 
@@ -14,7 +16,7 @@
 *::before,
 *::after {
     box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
+    font-family: "Pangolin", "Amatic SC", "Ubuntu", sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -34,7 +36,7 @@
 .card {
     padding: 2em 2em;
     box-shadow: 0 0 1rem 0 var(--clr-white-trans);
-    background-color: var(--clr-white);
+    background: linear-gradient(to right top, #f9f9f38a, #ffffff8e);
     backdrop-filter: blur(10px);
     color: var(--clr-black);
     border-radius: 1rem;
@@ -42,12 +44,14 @@
 
 .scroll-pane {
     height: 100vh;
+    background: transparent;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
+    font-size: 1.2em;
 }
 
 body {
-    background-color: var(--clr-black);
+    background: linear-gradient(to right, #0F2027, #203A43, #2C5364)
 }
 
 a {
@@ -59,6 +63,10 @@ img {
     width: 100%;
 }
 
+h1,h2,h3 {
+    font-family: "Ubuntu";
+}
+
 h2 {
     padding-bottom: 1em;
 }
@@ -67,9 +75,14 @@ h3 {
     margin: 1em;
 }
 
+ul {
+    list-style-type: none;
+}
+
 .side-title {
     writing-mode: sideways-lr;
     text-align: right;
+    padding-top: 2em;
     color: var(--clr-white-trans);
 }
 
@@ -94,7 +107,7 @@ h3 {
     width: min(70%, 62rem);
     margin: 2rem auto;
     row-gap: 1rem;
-    grid-template-rows: repeat(2, 1fr) repeat(3, 1.5fr) 1fr 0.1fr;
+    grid-template-rows: repeat(2, 1fr) repeat(3, 2fr) 1fr 0.1fr;
     grid-template-columns: 0.1fr 1fr 0.1fr;
     grid-template-areas: 
     'intro intro intro'
@@ -116,13 +129,10 @@ header {
 
 header {
     display: flex;
-    position: sticky;
-    top: 0;
     width: 100%;
     z-index: 2;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    background-color: var(--clr-white);
 }
 
 #logo {
@@ -136,11 +146,12 @@ header {
 }
 
 .nav-item {
-    color: var(--clr-black);
+    color: var(--clr-accent);
     margin-right: 4rem;
-    font-size: large;
+    font-size: 1.3em;
     text-decoration: none;
     font-weight: bold;
+    padding: 2em;
     transition: color, text-shadow 150ms;
 }
 
