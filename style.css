@@ -36,7 +36,7 @@
 .card {
     padding: 2em 2em;
     box-shadow: 0 0 1rem 0 var(--clr-white-trans);
-    background: linear-gradient(to right top, #f9f9f38a, #ffffff8e);
+    background: linear-gradient(to right top, #f9f9f369, #ffffff67);
     backdrop-filter: blur(10px);
     color: var(--clr-black);
     border-radius: 1rem;
@@ -61,6 +61,8 @@ a {
 
 img {
     width: 100%;
+    z-index: -1;
+    border-radius: 1rem;
 }
 
 h1,h2,h3 {
@@ -71,15 +73,33 @@ h2 {
     padding-bottom: 1em;
 }
 
-h3 {
-    margin: 1em;
-}
-
 ul {
     list-style-type: none;
 }
 
+.img-clip-circle {
+    display: block;
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    width: 50%;
+    margin-inline: auto;
+    margin-block: 1em;
+}
+
+.img-clip-lpoint {
+    -webkit-clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+}
+
+.img-clip-rpoint {
+    -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+}
+
+
 .side-title {
+    -webkit-writing-mode: sideways-lr;
+    -ms-writing-mode: sideways-lr;
     writing-mode: sideways-lr;
     text-align: right;
     padding-top: 2em;
@@ -170,6 +190,7 @@ header {
     display: grid;
     place-items: center;
     grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr 1fr;
 }
 
 .grid-intro-container img, .grid-intro-container div {
@@ -181,7 +202,7 @@ header {
 }
 
 .grid-intro-container div {
-    grid-column: 1/10;
+    grid-column: 1/7;
 }
 
 #about {
