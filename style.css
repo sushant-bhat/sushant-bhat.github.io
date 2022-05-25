@@ -59,6 +59,10 @@ a {
     color: var(--clr-accent);
 }
 
+p {
+    line-height: 1.6;
+}
+
 img {
     width: 100%;
     z-index: -1;
@@ -67,9 +71,6 @@ img {
 
 h1,h2,h3 {
     font-family: "Ubuntu";
-}
-
-h2 {
     padding-bottom: 1em;
 }
 
