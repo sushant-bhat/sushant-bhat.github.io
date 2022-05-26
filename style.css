@@ -50,7 +50,7 @@
     height: 100vh;
     background: transparent;
     overflow-y: scroll;
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: y proximity;
     font-size: 1.2em;
     scroll-behavior: smooth;
 }
@@ -137,7 +137,7 @@ ul {
     width: min(70%, 62rem);
     margin: 2rem auto;
     row-gap: 1rem;
-    grid-template-rows: repeat(2, 1fr) repeat(3, 2fr) 1fr 0.1fr;
+    grid-template-rows: repeat(2, 1fr) 2fr 3.5fr 2fr 1fr 0.1fr;
     grid-template-columns: 0.1fr 1fr 0.1fr;
     grid-template-areas: 
     'intro intro intro'
@@ -260,12 +260,17 @@ header {
     font-size: larger;
 }
 
-.grid-projects-done-container, 
 .grid-projects-progress-container, 
 .grid-experience-container {
     display: grid;
     gap: 4rem;
     grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-projects-done-container {
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: 1fr;
 }
 
 .grid-projects-done-container li, 
@@ -388,6 +393,7 @@ header {
 
 #nav-arrow {
     position: fixed;
+    z-index: 2;
     right: 10em;
     bottom: 2em;
     border-radius: 1rem;
