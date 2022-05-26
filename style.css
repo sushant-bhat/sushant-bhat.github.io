@@ -29,6 +29,10 @@
     color: var(--clr-white);
 }
 
+.font-accent {
+    color: var(--clr-accent);
+}
+
 .box-shadow {
     box-shadow: 0 0 1.5rem -0.25rem var(--clr-accent);
 }
@@ -48,10 +52,15 @@
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
     font-size: 1.2em;
+    scroll-behavior: smooth;
 }
 
 body {
-    background: linear-gradient(to right, #0F2027, #203A43, #2C5364)
+    background: linear-gradient(to right, #0F2027, #203A43, #2C5364);
+}
+
+span {
+    font-size: 1.3em;
 }
 
 a {
@@ -64,7 +73,7 @@ p {
 }
 
 img {
-    width: 100%;
+    max-width: 100%;
     z-index: -1;
     border-radius: 1rem;
 }
@@ -351,8 +360,8 @@ header {
     left: 0;
 }
 
-#prof-links .expandable-link::before, 
-#social-links .expandable-link::after {
+#prof-links .side-link::before, 
+#social-links .side-link::after {
     content: '';
     display: inline-block;
     aspect-ratio: 25/1;
@@ -361,12 +370,26 @@ header {
     margin-bottom: 15%;
 }
 
-.link-svg {
+#insta-logo {
+    border-radius: 0.1rem;
+}
+
+.hover-expandable {
     transition: transform ease-out 150ms;
 }
 
-.link-svg:hover {
+.hover-expandable:hover {
     transform: scale(1.5);
+}
+
+#nav-arrow {
+    position: fixed;
+    right: 10em;
+    bottom: 2em;
+    border-radius: 50%;
+    padding: 1em;
+    background-color: var(--clr-white-trans);
+    box-shadow: 0 0 0.5rem 0 var(--clr-white-trans);
 }
 
 
