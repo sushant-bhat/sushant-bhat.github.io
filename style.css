@@ -372,7 +372,8 @@ header {
 
 #insta-logo,
 #gmail-logo,
-#medium-logo {
+#medium-logo,
+#linkedin-logo {
     border-radius: 0.1rem;
 }
 
@@ -389,8 +390,8 @@ header {
     position: fixed;
     right: 10em;
     bottom: 2em;
-    border-radius: 50%;
-    padding: 1em;
+    border-radius: 1rem;
+    padding: 0.25em;
     background-color: var(--clr-white-trans);
     box-shadow: 0 0 0.5rem 0 var(--clr-white-trans);
 }
