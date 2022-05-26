@@ -370,9 +370,12 @@ header {
     margin-bottom: 15%;
 }
 
-#insta-logo {
+#insta-logo,
+#gmail-logo,
+#medium-logo {
     border-radius: 0.1rem;
 }
+
 
 .hover-expandable {
     transition: transform ease-out 150ms;
