@@ -10,6 +10,7 @@
     --clr-black: #171717;
     --clr-black-trans: #1b1b1bc0;
     --clr-accent: #F27900;
+    --clr-accent-trans: #f279008a;
 }
 
 *,
@@ -77,7 +78,7 @@ img {
     border-radius: 1rem;
 }
 
-h1,h2,h3 {
+h1,h2,h3,h4 {
     font-family: "Ubuntu";
     padding-bottom: 1em;
 }
@@ -111,8 +112,9 @@ ul {
     -ms-writing-mode: sideways-lr;
     writing-mode: sideways-lr;
     text-align: right;
+    text-shadow: 0 0 0.5rem currentColor;
     padding-top: 2em;
-    color: var(--clr-white-trans);
+    color: var(--clr-accent-trans);
 }
 
 .btn-primary {
@@ -120,7 +122,8 @@ ul {
     background-color: inherit;
     border: 1px solid currentColor;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 1.2rem;
+    font-family: "Ubuntu", sans-serif;
     cursor: pointer;
 }
 
@@ -193,12 +196,12 @@ nav {
     font-weight: bold;
     padding-top: 1.5em;
     padding-bottom: 0.5em;
-    transition: color, text-shadow 150ms;
+    transition: transform, text-shadow 150ms;
 }
 
 .nav-item:hover {
+    transform: scale(1.1);
     text-shadow: 0 0 10px currentColor;
-    border-bottom: 0.1em solid var(--clr-accent);
 }
 
 /* Main section */
@@ -314,33 +317,37 @@ nav {
 #grid-form-container {
     display: grid;
     width: 80%;
-    row-gap: 10em;
+    row-gap: 2em;
+    padding-inline: 4em;
     margin-inline: auto;
     justify-content: center;
-    grid-template-columns: repeat(8, 1fr);
     grid-template-areas: 
-    '. contact-details contact-details contact-details contact-details contact-details contact-details .' 
-    '. contact-msg contact-msg contact-msg contact-msg contact-msg contact-msg .'
-    '. . send-button send-button send-button send-button . .';
+    'contact-name'
+    'contact-email'
+    'contact-msg'
+    'send-button';
 }
 
 #grid-form-container label {
     font-size: 1.5rem;
-}
-
-#contact {
-    grid-area: contact;
+    color: var(--clr-black-trans);
+    font-weight: bold;
 }
 
 #contact-title {
     grid-area: contact-title;
 }
 
-#contact-details {
-    grid-area: contact-details;
-    display: grid;
-    gap: 6em;
-    grid-template-columns: repeat(2, 1fr);
+#contact {
+    grid-area: contact;
+}
+
+#contact-name {
+    grid-area: contact-name;
+}
+
+#contact-email {
+    grid-area: contact-email;
 }
 
 #contact-msg {
@@ -353,17 +360,19 @@ nav {
 }
 
 .input-text {
+    font-size: 1.5rem;
+    font-family: "Ubuntu", sans-serif;
     width: 100%;
     margin-block: 1rem;
     padding: 1em;
-    color: var(--clr-black);
+    color: var(--clr-white);
     background-color: inherit;
     border: none;
     border-bottom: 2px solid var(--clr-black-trans);
 }
 
 .input-text:focus {
-    outline: none;
+    outline: 0;
 }
 
 /* Side Links section */
@@ -409,6 +418,7 @@ nav {
 
 .hover-expandable:hover {
     transform: scale(1.5);
+    box-shadow: 0px 0px 0.5rem -2px var(--clr-white-trans);
 }
 
 #nav-arrow {
@@ -449,14 +459,14 @@ footer {
     }
 
     #ham-menu {
-        display: block;
+        display: none;
     }
 
     nav {
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        display: none;
+        /* display: none; */
     }
 
     #grid-root-container {
@@ -502,25 +512,6 @@ footer {
     
     .grid-projects-progress-container li {
         filter: blur(0);
-    }
-
-    #grid-form-container {
-        width: 100%;
-        row-gap: 8em;
-        margin-inline: auto;
-        justify-content: center;
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-        'contact-details' 
-        'contact-msg'
-        'send-button';
-    }
-
-    #contact-details {
-        grid-area: contact-details;
-        display: grid;
-        gap: 3em;
-        grid-template-columns: 1fr;
     }
 }
 
