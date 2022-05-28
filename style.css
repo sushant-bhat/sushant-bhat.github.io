@@ -39,11 +39,10 @@
 
 .card {
     padding: 2em 2em;
-    box-shadow: 0 0 1rem 0 var(--clr-white-trans);
+    box-shadow: 0 0 1rem 0 currentColor;
     background: linear-gradient(to right top, #f9f9f369, #ffffff67);
     backdrop-filter: blur(10px);
     color: var(--clr-black);
-    border-radius: 1rem;
 }
 
 .scroll-pane {
@@ -165,6 +164,17 @@ header {
     align-items: center;
 }
 
+#ham-menu {
+    display: none;
+}
+
+nav {
+    display: flex;
+    z-index: 2;
+    justify-content: right;
+    align-items: flex-end;
+}
+
 #logo {
     margin-top: 0.25em;
     margin-left: 0.25em;
@@ -177,16 +187,18 @@ header {
 
 .nav-item {
     color: var(--clr-accent);
-    margin-right: 4rem;
+    margin-right: 4em;
     font-size: 1.3em;
     text-decoration: none;
     font-weight: bold;
-    padding: 2em;
+    padding-top: 1.5em;
+    padding-bottom: 0.5em;
     transition: color, text-shadow 150ms;
 }
 
 .nav-item:hover {
     text-shadow: 0 0 10px currentColor;
+    border-bottom: 0.1em solid var(--clr-accent);
 }
 
 /* Main section */
@@ -213,6 +225,13 @@ header {
 
 .grid-intro-container div {
     grid-column: 1/7;
+}
+
+#btn-resume {
+    display: block;
+    margin-top: 2rem;
+    margin-inline: auto;
+    padding: 0.5em;
 }
 
 #about {
@@ -285,7 +304,7 @@ header {
 .grid-projects-done-container li:hover, 
 .grid-projects-progress-container li:hover {
     transform: scale(1.1);
-    box-shadow: 0px 0px 40px -2px currentColor;
+    box-shadow: 0px 0px 40px -2px var(--clr-white-trans);
     filter: blur(0px);
 }
 
@@ -355,6 +374,7 @@ header {
     gap: 4rem;
     position: fixed;
     bottom: 15rem;
+    z-index: 2;
 }
 
 #social-links {
@@ -396,9 +416,11 @@ header {
     z-index: 2;
     right: 10em;
     bottom: 2em;
-    border-radius: 1rem;
-    padding: 0.25em;
+    padding: 0.2em;
     background-color: var(--clr-white-trans);
+}
+
+#nav-arrow:hover {
     box-shadow: 0 0 0.5rem 0 var(--clr-white-trans);
 }
 
@@ -420,23 +442,48 @@ footer {
         margin: 0;
         padding: 0;
     }
-
     
-    .scroll-pane {
-        scroll-snap-type: y proximity;
+    header {
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #ham-menu {
+        display: block;
+    }
+
+    nav {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        display: none;
     }
 
     #grid-root-container {
         margin: 2rem auto;
+        grid-template-rows: repeat(2, 1fr) 0.1fr 2fr 0.1fr 2fr 0.1fr 2fr 0.1fr 1fr 0.1fr;
         grid-template-columns: 1fr;
         grid-template-areas: 
         'intro'
         'about'
+        'exp-title'
         'exp'
+        'proj-done-title'
         'proj-done'
+        'proj-progress-title'
         'proj-progress'
+        'contact-title'
         'contact'
         'footer';
+    }
+    
+    .side-title {
+        -webkit-writing-mode: horizontal-tb;
+        -ms-writing-mode: horizontal-tb;
+        writing-mode: horizontal-tb;
+        text-align: left;
+        padding-top: 2em;
+        color: var(--clr-white-trans);
     }
 
     .grid-intro-container {
@@ -451,6 +498,10 @@ footer {
     .grid-projects-progress-container, 
     .grid-experience-container {
         grid-template-columns: 1fr;
+    }
+    
+    .grid-projects-progress-container li {
+        filter: blur(0);
     }
 
     #grid-form-container {
@@ -478,11 +529,19 @@ footer {
         min-width: max(90%, 320px);
         margin: 2rem auto;
     }
+    
+    .side-title {
+        -webkit-writing-mode: horizontal-tb;
+        -ms-writing-mode: horizontal-tb;
+        writing-mode: horizontal-tb;
+        text-align: left;
+        padding-top: 2em;
+        color: var(--clr-white-trans);
+    }
 }
 
 @media (hover: none) {
-    .grid-projects-done-container li:hover, 
-    .grid-projects-progress-container li:hover {
-        filter: blur(0px);
+    .grid-projects-progress-container li {
+        filter: blur(0);
     }
 }

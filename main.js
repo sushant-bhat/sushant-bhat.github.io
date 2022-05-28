@@ -1,0 +1,1 @@
+var hamMenu = document.getElementById("ham-menu")
