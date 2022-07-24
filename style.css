@@ -1,6 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+/*
+    font-family: 'Merriweather', serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Sacramento', cursive;
+*/
 
 /* Global section */
 
@@ -17,7 +19,7 @@
 *::before,
 *::after {
     box-sizing: border-box;
-    font-family: "Pangolin", "Amatic SC", "Ubuntu", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -53,10 +55,13 @@
     scroll-snap-type: y proximity;
     font-size: 1.2em;
     scroll-behavior: smooth;
+    scroll-padding-top: var(--scroll-padding, 100px);
 }
 
 body {
-    background: linear-gradient(to right, #0F2027, #203A43, #2C5364);
+    background-color: #000000;
+    font-family: 'Montserrat', sans-serif;
+    /* background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%); */
 }
 
 span {
@@ -79,7 +84,7 @@ img {
 }
 
 h1,h2,h3,h4 {
-    font-family: "Ubuntu";
+    font-family: 'Merriweather', serif;
     padding-bottom: 1em;
 }
 
@@ -101,11 +106,13 @@ ul {
     clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
 }
 
-.img-clip-rpoint {
-    -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
-    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+.fancy-border-1 {
+    border-radius: 65% 35% 70% 30% / 35% 66% 34% 65%;
 }
 
+.border-dialog {
+    border-radius: 10% 10% 0% 10% / 10% 10% 0% 10%;
+}
 
 .side-title {
     -webkit-writing-mode: sideways-lr;
@@ -123,7 +130,6 @@ ul {
     border: 1px solid currentColor;
     border-radius: 5px;
     font-size: 1.2rem;
-    font-family: "Ubuntu", sans-serif;
     cursor: pointer;
 }
 
@@ -136,13 +142,12 @@ ul {
 
 #grid-root-container {
     display: grid;
-    width: min(70%, 62rem);
+    width: min(70%, 40rem);
     margin: 2rem auto;
     row-gap: 1rem;
-    grid-template-rows: repeat(2, 1fr) 2fr 3.5fr 2fr 1fr 0.1fr;
+    grid-template-rows: 1fr 2fr 3.5fr 2fr 1fr 0.1fr;
     grid-template-columns: 0.1fr 1fr 0.1fr;
-    grid-template-areas: 
-    'intro intro intro'
+    grid-template-areas:
     '. about .'
     'exp-title  exp .'
     'proj-done-title proj-done .'
@@ -152,7 +157,8 @@ ul {
 }
 
 #grid-root-container > *,
-header {
+header,
+.intro-container {
     scroll-snap-align: start;
 }
 
@@ -161,10 +167,14 @@ header {
 
 header {
     display: flex;
+    position: fixed;
+    top: 0;
     width: 100%;
     z-index: 2;
     justify-content: space-around;
     align-items: center;
+    padding-bottom: 0.8em;
+    border-bottom: solid 0.05em var(--clr-white-trans);
 }
 
 #ham-menu {
@@ -191,7 +201,7 @@ nav {
 .nav-item {
     color: var(--clr-accent);
     margin-right: 4em;
-    font-size: 1.3em;
+    font-size: 1rem;
     text-decoration: none;
     font-weight: bold;
     padding-top: 1.5em;
@@ -207,34 +217,52 @@ nav {
 /* Main section */
 
 .intro {
-    grid-area: intro;
     min-height: 100vh;
 }
 
-.grid-intro-container {
+.intro-container {
     display: grid;
     place-items: center;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(7, 1fr);
 }
 
-.grid-intro-container img, .grid-intro-container div {
+.intro-container img {
+    grid-row: 1,-1;
+}
+
+.intro-container div {
     grid-row: 1/-1;
 }
 
-.grid-intro-container img {
-    grid-column: 4/-1;
+.intro-container img {
+    grid-column: 4/7;
 }
 
-.grid-intro-container div {
-    grid-column: 1/7;
+.intro-container div {
+    grid-column: 2/4;
+}
+
+.hero-text {
+    position: relative;
+}
+
+.hero-name {
+    font-size: 3.5rem;
+    padding-bottom: 0.2em;
 }
 
 #btn-resume {
-    display: block;
+    display: inline-block;
+    background-color: var(--clr-accent);
+    color: var(--clr-black-trans);
     margin-top: 2rem;
     margin-inline: auto;
-    padding: 0.5em;
+    border-radius: 1.5em;
+    padding-inline: 4em;
+    padding-block: 1em;
+    border: none;
+    position: absolute;
+    top: 20em;
 }
 
 #about {
@@ -274,12 +302,14 @@ nav {
 .grid-about-container img {
     grid-column: 1/4;
     grid-row: 1/-1;
+    z-index: 1;
 }
 
 .grid-about-container > div {
     grid-column: 3/-1;
     grid-row: 1/-1;
     font-size: larger;
+    padding-left: 9rem;
 }
 
 .grid-projects-progress-container, 
@@ -427,11 +457,10 @@ nav {
     right: 10em;
     bottom: 2em;
     padding: 0.2em;
-    background-color: var(--clr-white-trans);
 }
 
 #nav-arrow:hover {
-    box-shadow: 0 0 0.5rem 0 var(--clr-white-trans);
+    filter: drop-shadow(0 0 0.75rem var(--clr-white-trans));
 }
 
 
@@ -496,7 +525,7 @@ footer {
         color: var(--clr-white-trans);
     }
 
-    .grid-intro-container {
+    .intro-container {
         display: block;
     }
 

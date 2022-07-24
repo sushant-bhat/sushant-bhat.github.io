@@ -6,6 +6,9 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap" rel="stylesheet">
 	</head>
 	<body>
 		<div class="scroll-pane">
@@ -17,11 +20,11 @@
 				<span id="ham-menu">----</span>
 				<nav id="nav">
 					<!--About, Experience, Projects, Contact, RESUME-->
-					<a href="#about" class="nav-item">About</a>
-					<a href="#exp-title" class="nav-item">Experience</a>
-					<a href="#proj-done-title" class="nav-item">Projects</a>
-					<a href="#proj-progress-title" class="nav-item">WIP</a>
-					<a href="#contact" class="nav-item">Contact</a>
+					<a href="#about" class="nav-item">about()</a>
+					<a href="#exp-title" class="nav-item">experience()</a>
+					<a href="#proj-done-title" class="nav-item">projects()</a>
+					<a href="#proj-progress-title" class="nav-item">wip()</a>
+					<a href="#contact" class="nav-item">contact()</a>
 				</nav>
 			</header>
 			<aside id="prof-links">
@@ -65,26 +68,24 @@
 				</div>
 			</aside>
 			<aside id="nav-arrow">
-				<a href="#header"><img src="images/nav-arrow.png" alt="Go to top"></a>
+				<a href="#hero"><img src="images/nav-arrow.png" alt="Go to top"></a>
 			</aside>
+			<section id="hero" class="intro intro-container">
+				<img src="images/HeroImg.png" alt="Intro card" class="img-clip-lpoint">
+				<div class="hero-text font-light">
+					<h5>Hi, I am</h5> 
+					<h1 class="hero-name font-accent">SUSHANT_BHAT</h1>
+					<p>// A BACKEND ENGINEER</p>
+					<button id="btn-resume">RESUME</button>
+				</div>
+			</section>
 			<div id="grid-root-container">
-				<section class="intro grid-intro-container">
-					<img src="images/hero-img-sketch.png" alt="Intro card" class="img-clip-lpoint">
-					<div class="font-light">
-						<h1>Hi, I am <span class="font-accent">SUSHANT BHAT</span></h1>
-						<p>A Senior Backend Engineer, a budding Game Developer, a novice Web Developer and an awesome Cook! (if you disregard what my wife says)</p>
-						<button id="btn-resume">RESUME</button>
-					</div>
-				</section>
 				<section id="about" class="grid-about-container">
 					<!--About me card-->
-					<img src="images/about-bg.jpg" alt="Sushant Bhat" class="img-clip-rpoint">
+					<img src="images/about-bg.jpg" alt="Sushant Bhat" class="fancy-border-1">
 					<div class="card">
 						<h2>ABOUT ME</h2>
-						<p>
-							Working as an IT professional since x years now. Software engineer by the day, game developer by night, or rather by the evening. Getting my hands dirty
-							in full stack now.
-						</p>
+						<p>A Senior Backend Engineer, a budding Game Developer, a novice Web Developer and an awesome Cook! (if you disregard what my wife says)</p>
 					</div>
 				</section>
 				<h2 id="exp-title" class="side-title">EXPERIENCE</h2>
@@ -181,8 +182,8 @@
 				<h2 id="contact-title" class="side-title">CONTACT</h2>
 				<section id="contact" class="font-light">
 					<!--Contact card-->
-					<h3>Wanna take this to the next level? </h3>
-					<h4>Ughh....that sounded better in my head. Just drop some sweet words in my inbox and make my day!</h4>
+					<h3>Get in touch</h3>
+					<!-- <h4>Ughh....that sounded better in my head. Just drop some sweet words in my inbox and make my day!</h4> -->
 					<form action="" method="post" id="grid-form-container" class="card">
 						<div id="contact-name">
 							<label for="msg_name">Name</label><br>
