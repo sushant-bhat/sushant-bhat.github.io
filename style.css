@@ -1,7 +1,7 @@
 /*
     font-family: 'Merriweather', serif;
     font-family: 'Montserrat', sans-serif;
-    font-family: 'Sacramento', cursive;
+    font-family: 'Satisfy', cursive;
 */
 
 /* Global section */
@@ -142,7 +142,7 @@ ul {
 
 #grid-root-container {
     display: grid;
-    width: min(70%, 40rem);
+    width: min(80%, 50rem);
     margin: 2rem auto;
     row-gap: 1rem;
     grid-template-rows: 1fr 2fr 3.5fr 2fr 1fr 0.1fr;
@@ -167,8 +167,8 @@ header,
 
 header {
     display: flex;
-    position: fixed;
-    top: 0;
+    /* position: fixed;
+    top: 0; */
     width: 100%;
     z-index: 2;
     justify-content: space-around;
@@ -222,36 +222,34 @@ nav {
 
 .intro-container {
     display: grid;
+    max-height: 100vh;
     place-items: center;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas: 
+    'hero-text hero-img'
+    'hero-resume hero-img';
 }
 
-.intro-container img {
-    grid-row: 1,-1;
+#hero-text {
+    grid-area: hero-text;
 }
 
-.intro-container div {
-    grid-row: 1/-1;
+#hero-img {
+    grid-area: hero-img;
 }
 
-.intro-container img {
-    grid-column: 4/7;
-}
-
-.intro-container div {
-    grid-column: 2/4;
-}
-
-.hero-text {
-    position: relative;
+#hero-resume {
+    grid-area: hero-resume;
 }
 
 .hero-name {
+    font-family: 'Satisfy', cursive;
     font-size: 3.5rem;
     padding-bottom: 0.2em;
 }
 
-#btn-resume {
+#hero-resume-btn {
     display: inline-block;
     background-color: var(--clr-accent);
     color: var(--clr-black-trans);
@@ -261,8 +259,6 @@ nav {
     padding-inline: 4em;
     padding-block: 1em;
     border: none;
-    position: absolute;
-    top: 20em;
 }
 
 #about {
@@ -454,7 +450,7 @@ nav {
 #nav-arrow {
     position: fixed;
     z-index: 2;
-    right: 10em;
+    right: 50vw;
     bottom: 2em;
     padding: 0.2em;
 }
