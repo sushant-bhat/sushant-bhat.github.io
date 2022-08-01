@@ -145,15 +145,14 @@ ul {
     width: min(80%, 50rem);
     margin: 2rem auto;
     row-gap: 1rem;
-    grid-template-rows: 1fr 2fr 3.5fr 2fr 1fr 0.1fr;
-    grid-template-columns: 0.1fr 1fr 0.1fr;
+    grid-template-rows: 1.5fr 2fr 4fr 2fr 1fr;
+    grid-template-columns: 1fr 10fr 1fr;
     grid-template-areas:
     '. about .'
     'exp-title  exp .'
     'proj-done-title proj-done .'
     'proj-progress-title proj-progress .'
     'contact-title contact .'
-    'footer footer footer';
 }
 
 #grid-root-container > *,
@@ -304,8 +303,7 @@ nav {
 .grid-about-container > div {
     grid-column: 3/-1;
     grid-row: 1/-1;
-    font-size: larger;
-    padding-left: 9rem;
+    padding-left: 7em;
 }
 
 .grid-projects-progress-container, 
@@ -355,8 +353,7 @@ nav {
 }
 
 #grid-form-container label {
-    font-size: 1.5rem;
-    color: var(--clr-black-trans);
+    color: var(--clr-white-trans);
     font-weight: bold;
 }
 
@@ -386,8 +383,7 @@ nav {
 }
 
 .input-text {
-    font-size: 1.5rem;
-    font-family: "Ubuntu", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     width: 100%;
     margin-block: 1rem;
     padding: 1em;
@@ -464,8 +460,9 @@ nav {
 /* Footer section */
 
 footer {
-    grid-area: footer;
     text-align: center;
+    margin: auto;
+    width: 90%;
 }
 
 
