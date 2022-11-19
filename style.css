@@ -80,7 +80,7 @@ p {
 img {
     max-width: 100%;
     z-index: -1;
-    border-radius: 1rem;
+    /* border-radius: 1rem; */
 }
 
 h1,h2,h3,h4 {
