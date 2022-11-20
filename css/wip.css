@@ -1,0 +1,20 @@
+@import "style.css";
+
+.grid-projects-progress-container {
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-projects-progress-container li {
+    transition: transform 150ms, filter 150ms;
+}
+
+.grid-projects-progress-container li {
+    filter: blur(5px);
+}
+
+.grid-projects-progress-container li:hover {
+    box-shadow: 0px 0px 40px -2px var(--clr-sec);
+    filter: blur(0px);
+}

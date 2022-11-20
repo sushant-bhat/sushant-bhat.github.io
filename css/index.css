@@ -1,0 +1,44 @@
+.intro {
+    min-height: 80vh;
+}
+
+.intro-container {
+    display: grid;
+    max-height: 95vh;
+    place-items: center;
+    grid-template-columns: 1fr repeat(2, 5fr) 1fr;
+    grid-template-rows: 1fr 4fr 2fr 1fr;
+    grid-template-areas: 
+    '. . . .'
+    '. hero-text hero-img .'
+    '. hero-resume hero-img .';
+}
+
+#hero-text {
+    grid-area: hero-text;
+}
+
+#hero-img {
+    grid-area: hero-img;
+}
+
+#hero-resume {
+    grid-area: hero-resume;
+}
+
+.hero-name {
+    font-family: 'Satisfy', cursive;
+    font-size: 3.5rem;
+    padding-bottom: 0.2em;
+}
+
+#hero-resume-btn {
+    display: inline-block;
+    background-color: var(--clr-accent);
+    margin-top: 2rem;
+    margin-inline: auto;
+    border-radius: 1.5em;
+    padding-inline: 4em;
+    padding-block: 1em;
+    border: none;
+}

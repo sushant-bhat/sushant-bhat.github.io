@@ -1,0 +1,14 @@
+.grid-projects-done-container {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+}
+
+.grid-projects-done-container li {
+    transition: transform 150ms, filter 150ms;
+}
+
+.grid-projects-done-container li:hover {
+    box-shadow: 0px 0px 40px -2px var(--clr-sec);
+    filter: blur(0px);
+}
