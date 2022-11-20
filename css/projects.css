@@ -1,14 +1,14 @@
-.grid-projects-done-container {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: 1fr;
-}
-
-.grid-projects-done-container li {
+#projects-list li {
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 2rem;
+    padding: 2em;
+    margin: 2rem;
     transition: transform 150ms, filter 150ms;
 }
 
-.grid-projects-done-container li:hover {
+#projects-list li:hover {
     box-shadow: 0px 0px 40px -2px var(--clr-sec);
     filter: blur(0px);
+    cursor: pointer;
 }
