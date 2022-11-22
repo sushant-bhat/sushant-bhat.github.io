@@ -1,14 +1,31 @@
+
+#projects {
+    min-height: 88vh;
+    width: 70%;
+    margin: auto;
+}
+
+#projects-title {
+    text-align: center;
+    padding: 3em;
+    margin: 2em;
+}
+
+#projects-list {
+    max-width: 70%;
+    margin: auto;
+}
+
 #projects-list li {
     text-align: center;
     border: 2px solid black;
     border-radius: 2rem;
     padding: 2em;
     margin: 2rem;
-    transition: transform 150ms, filter 150ms;
+    transition: transform 150ms;
 }
 
 #projects-list li:hover {
     box-shadow: 0px 0px 40px -2px var(--clr-sec);
-    filter: blur(0px);
     cursor: pointer;
 }

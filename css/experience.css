@@ -1,5 +1,35 @@
-.grid-experience-container {
+#exp-title {
+    text-align: center;
+    padding: 2em;
+    margin: 1em;
+}
+
+#grid-experience {
     display: grid;
     gap: 1rem;
+    margin-bottom: 2rem;
     grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    'walmart-exp . .'
+    '. soroco-exp .'
+    '. . samsung-exp';
+}
+
+#grid-experience > li {
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 2em;
+    padding: 2em;
+}
+
+#walmart-exp {
+    grid-area: walmart-exp;
+}
+
+#soroco-exp {
+    grid-area: soroco-exp;
+}
+
+#samsung-exp {
+    grid-area: samsung-exp;
 }
