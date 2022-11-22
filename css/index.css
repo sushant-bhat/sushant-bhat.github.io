@@ -1,10 +1,6 @@
-.intro {
-    min-height: 80vh;
-}
-
-.intro-container {
+.grid-intro {
     display: grid;
-    max-height: 95vh;
+    max-height: 92vh;
     place-items: center;
     grid-template-columns: 1fr repeat(2, 5fr) 1fr;
     grid-template-rows: 1fr 4fr 2fr 1fr;
@@ -26,13 +22,13 @@
     grid-area: hero-resume;
 }
 
-.hero-name {
+#hero-name {
     font-family: 'Satisfy', cursive;
     font-size: 3.5rem;
     padding-bottom: 0.2em;
 }
 
-#hero-resume-btn {
+#resume-btn {
     display: inline-block;
     background-color: var(--clr-accent);
     margin-top: 2rem;
