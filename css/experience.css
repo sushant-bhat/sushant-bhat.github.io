@@ -1,7 +1,13 @@
+#exp {
+    min-height: 88vh;
+    width: 70%;
+    margin: auto;
+}
+
 #exp-title {
     text-align: center;
-    padding: 2em;
-    margin: 1em;
+    padding: 3em;
+    margin: 2em;
 }
 
 #grid-experience {
