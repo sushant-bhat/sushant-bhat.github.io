@@ -24,7 +24,7 @@
     text-align: center;
     border: 2px solid black;
     border-radius: 2rem;
-    transition: transform 150ms;
+    transition: transform 800ms ease;
 }
 
 .wip-list li:hover {

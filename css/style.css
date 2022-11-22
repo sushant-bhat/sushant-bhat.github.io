@@ -15,6 +15,7 @@
     --clr-accent: #20A39E;
     --clr-text-dark: #000000;
     --clr-text-light: #F4F4F6;
+    --header-height: 50px;
 }
 
 *,
@@ -133,6 +134,11 @@ header {
     justify-content: space-around;
     align-items: center;
     padding-bottom: 0.8em;
+    transition: transform 0.2s;
+}
+
+.header-hide {
+    transform: translateY(var(--header-height));
 }
 
 nav {

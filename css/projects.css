@@ -22,7 +22,7 @@
     border-radius: 2rem;
     padding: 2em;
     margin: 2rem;
-    transition: transform 150ms;
+    transition: transform 800ms ease;
 }
 
 #projects-list li:hover {
