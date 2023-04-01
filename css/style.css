@@ -2,17 +2,17 @@
     font-family: 'Merriweather', serif;
     font-family: 'Montserrat', sans-serif;
     font-family: 'Satisfy', cursive;
-    Primary dark color
-    Secondary off white color
-    Accent bright color (call to action)
+    Primary Neutral color
+    Secondary Dark complementary color
+    Accent contrast color (call to action)
 */
 
 /* Global section */
 
 :root {
-    --clr-primary: #E6E6E9;
-    --clr-sec: #000000;
-    --clr-accent: #20A39E;
+    --clr-primary: #F1FFFA;
+    --clr-sec: #93B7BE;
+    --clr-accent: #B68F40;
     --clr-text-dark: #000000;
     --clr-text-light: #F4F4F6;
     --header-height: 50px;
@@ -125,14 +125,13 @@ ul {
 /* Header section */
 
 header {
-    background-color: var(--clr-sec);
     display: flex;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 2;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
     padding-bottom: 0.8em;
     transition: transform 0.2s;
 }
@@ -143,9 +142,10 @@ header {
 
 nav {
     display: flex;
-    z-index: 2;
-    justify-content: right;
-    align-items: flex-end;
+    background-color: var(--clr-sec);
+    flex-direction: column;
+    padding: 1rem;
+    align-items: center;
 }
 
 #logo {
@@ -154,24 +154,38 @@ nav {
 }
 
 #nav {
-    margin-right: 1.2em;
     margin-block: auto;
+}
+
+#nav__ham {
+    margin-right: 0.5rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.elem-hide {
+    display: none;
 }
 
 .nav-item {
     color: var(--clr-text-light);
-    margin-right: 4em;
     font-size: 1rem;
     text-decoration: none;
     font-weight: bold;
-    padding-top: 1.5em;
-    padding-bottom: 0.5em;
+    padding-block: 1.5em;
+    padding-inline: 3rem;
     transition: transform, text-shadow 150ms;
 }
 
 .nav-item:hover {
     transform: scale(1.1);
     text-shadow: 0 0 10px currentColor;
+}
+
+#nav__close__btn {
+    font-size: 2rem;
+    align-self: flex-end;
+    cursor: pointer;
 }
 
 /* Footer section */
