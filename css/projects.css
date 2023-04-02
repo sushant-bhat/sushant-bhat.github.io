@@ -5,27 +5,29 @@
     margin: auto;
 }
 
-#projects-title {
+#projects__title {
     text-align: center;
-    padding: 3em;
-    margin: 2em;
+    margin-top: 5rem;
+    color: var(--clr-sec);
 }
 
-#projects-list {
-    max-width: 70%;
+#projects__list {
     margin: auto;
 }
 
-#projects-list li {
+#projects__list li {
     text-align: center;
-    border: 2px solid black;
+    border: 2px solid var(--clr-sec);
     border-radius: 2rem;
-    padding: 2em;
-    margin: 2rem;
+    padding: 1em;
+    margin-bottom: 2rem;
     transition: transform 800ms ease;
 }
 
 #projects-list li:hover {
     box-shadow: 0px 0px 40px -2px var(--clr-sec);
     cursor: pointer;
+}
+
+@media only screen and (min-width: 53rem) {
 }

@@ -6,24 +6,25 @@
 
 #exp-title {
     text-align: center;
-    padding: 3em;
-    margin: 2em;
+    margin-top: 4rem;
+    color: var(--clr-sec);
 }
 
 #grid-experience {
     display: grid;
     gap: 1rem;
     margin-bottom: 2rem;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
     grid-template-areas: 
-    'walmart-exp . .'
-    '. soroco-exp .'
-    '. . samsung-exp';
+    'walmart-exp'
+    'soroco-exp'
+    'samsung-exp';
 }
 
 #grid-experience > li {
     text-align: center;
-    border: 2px solid black;
+    border: 2px solid var(--clr-sec);
     border-radius: 2em;
     padding: 2em;
 }
@@ -38,4 +39,16 @@
 
 #samsung-exp {
     grid-area: samsung-exp;
+}
+
+@media only screen and (min-width: 53rem) {
+    #grid-experience {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+        'walmart-exp . .'
+        '. soroco-exp .'
+        '. . samsung-exp';
+    }
+    
 }

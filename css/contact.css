@@ -2,32 +2,28 @@
     min-height: 88vh;
 }
 
-#contact-title {
+#contact__title {
     text-align: center;
-    padding: 3em;
-    margin: 2em;
+    margin-top: 5rem;
+    color: var(--clr-sec);
 }
 
-#grid-contact {
+#contact__content {
     display: grid;
-    width: 50%;
-    min-width: 22rem;
     justify-content: center;
     margin: auto;
     padding-bottom: 2rem;
-    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-columns: 1fr 9fr 1fr;
     grid-template-areas: 
     'prof-media grid-contact-form social-media';
 }
 
-#grid-contact-form {
+#contact__form {
+    grid-area: grid-contact-form;
     display: grid;
-    row-gap: 0.5em;
-    width: 70%;
-    min-width: 22rem;
-    padding: 0.5em 1em;
-    margin: auto;
-    border: 2px solid black;
+    row-gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--clr-sec);
     border-radius: 2rem;
     grid-template-columns: 1fr;
     grid-template-areas: 
@@ -37,20 +33,20 @@
     'send-button';
 }
 
-#contact-name {
+#contact__name {
     grid-area: contact-name;
 }
 
-#contact-email {
+#contact__email {
     grid-area: contact-email;
 }
 
-#contact-msg {
+#contact__msg {
     grid-area: contact-msg;
     resize: none;
 }
 
-#send-button {
+#send__btn {
     grid-area: send-button;
     margin-inline: auto;
 }
@@ -70,24 +66,34 @@
     outline: 0;
 }
 
-#social-media {
+#social__media {
     display: flex;
     flex-direction: column;
     grid-area: social-media;
-    padding: 1em;
-    width: 70%;
+    padding: 0.2rem;
+    max-width: 29rem;
+    margin: 1rem auto;
+    justify-content: space-around;
+}
+
+#prof__media {
+    display: flex;
+    flex-direction: column;
+    grid-area: prof-media;
+    padding: 0.2rem;
     max-width: 29rem;
     margin: 2em auto;
     justify-content: space-around;
 }
 
-#prof-media {
-    display: flex;
-    flex-direction: column;
-    grid-area: prof-media;
-    padding: 1em;
-    width: 70%;
-    max-width: 29rem;
-    margin: 2em auto;
-    justify-content: space-around;
+@media only screen and (min-width: 53rem) {
+    #contact__content {
+        grid-template-columns: 1fr 15fr 1fr;
+        grid-template-areas: 
+        'prof-media grid-contact-form social-media';
+    }
+
+    #contact__form {
+        max-width: 90rem;
+    }
 }
