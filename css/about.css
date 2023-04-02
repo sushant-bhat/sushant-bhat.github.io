@@ -1,15 +1,38 @@
 #about {
-    min-height: 88vh;
+    min-height: 80vh;
 }
 
-#about-content {
+#about__content {
+    position: relative;
     padding: 2em;
     margin: 1em;
     text-align: center;
 }
 
-#about-title {
+#about__title {
     text-align: center;
-    padding: 3em;
-    margin: 2em;
+    margin-top: 5rem;
+}
+
+.about__card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.about__card-selected {
+    display: block;
+}
+
+.about__card > img {
+    opacity: 0.3;
+}
+
+.about__card > p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
 }
