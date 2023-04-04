@@ -60,6 +60,10 @@ body {
     background-color: var(--clr-primary);
 }
 
+main {
+    margin-top: calc(-1 * var(--header-height));
+}
+
 span {
     font-size: 1.3em;
 }

@@ -1,5 +1,6 @@
 const header = document.querySelector("header");
 const rootElem = document.querySelector(':root');
+console.log(-1 * header.offsetHeight + "px")
 rootElem.style.setProperty('--header-height', -1 * header.offsetHeight + "px");
 let lastScrollY = window.scrollY;
 
