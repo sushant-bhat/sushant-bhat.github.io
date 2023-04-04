@@ -147,7 +147,7 @@ header {
 #logo {
     margin-top: 0.25em;
     margin-left: 0.25em;
-    transition: transform, text-shadow 150ms;
+    transition: transform, text-shadow 300ms;
     align-self: flex-start;
 }
 
@@ -162,23 +162,19 @@ header {
     align-self: flex-end;
 }
 
-#nav__ham.active {
-    background-color: hsla(190, 25%, 66%, 0.95);
-}
-
-#nav__menu {
+#nav {
     /* This is added separate to #nav because otherwise display property of id takes over everything */
-    display: none;
+    display: flex;
     flex-direction: column;
     padding: 1rem;
     align-items: center;
     margin-block: auto;
-    background-color: hsla(190, 25%, 66%, 0.95);
-    transition: all 0.3s ease-in-out;
+    height: 100vh;
+    transition: width 300ms ease-in-out;
 }
 
-#nav__menu.active {
-    display: flex;
+#nav.active {
+    background-color: var(--clr-sec);
 }
 
 .bar {
@@ -203,6 +199,20 @@ header {
     transform: translateY(-0.5rem) rotate(-45deg);
 }
 
+#nav__menu {
+    display: none;
+    opacity: 0;
+    flex-direction: column;
+    background-color: var(--clr-sec);
+    -webkit-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#nav__menu.active {
+    display: flex;
+    opacity: 1;
+}
+
 .nav-item {
     color: var(--clr-text-dark);
     font-size: 1rem;
@@ -223,9 +233,18 @@ header {
         justify-content: space-around;
     }
 
+    #logo {
+        align-self: auto;
+    }
+
+    #nav {
+        height: auto;
+    }
+
     #nav__menu {
         margin-block: auto;
         display: flex;
+        opacity: 1;
         flex-direction: row;
         padding-inline: 1rem;
         padding-block: 0.2rem;
