@@ -2,19 +2,20 @@
     font-family: 'Merriweather', serif;
     font-family: 'Montserrat', sans-serif;
     font-family: 'Satisfy', cursive;
-    Primary dark color
-    Secondary off white color
-    Accent bright color (call to action)
+    Primary Neutral color
+    Secondary Dark complementary color
+    Accent contrast color (call to action)
 */
 
 /* Global section */
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@500&display=swap');
 
 :root {
-    --clr-primary: #E6E6E9;
-    --clr-sec: #000000;
-    --clr-accent: #20A39E;
-    --clr-text-dark: #000000;
-    --clr-text-light: #F4F4F6;
+    --clr-primary: hsl(160, 100%, 97%);
+    --clr-sec: hsl(190, 25%, 66%);
+    --clr-accent: hsl(40, 48%, 48%);
+    --clr-text-dark: hsl(0, 0%, 0%);
+    --clr-text-light: hsl(240, 10%, 96%);
     --header-height: 50px;
 }
 
@@ -22,7 +23,7 @@
 *::before,
 *::after {
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Mukta', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -51,9 +52,16 @@
     backdrop-filter: blur(10px);
 }
 
+.elem-hide {
+    display: none;
+}
+
 body {
     background-color: var(--clr-primary);
-    font-family: 'Montserrat', sans-serif;
+}
+
+main {
+    margin-top: calc(-1 * var(--header-height));
 }
 
 span {
@@ -125,13 +133,12 @@ ul {
 /* Header section */
 
 header {
-    background-color: var(--clr-sec);
     display: flex;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 2;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding-bottom: 0.8em;
     transition: transform 0.2s;
@@ -141,38 +148,119 @@ header {
     transform: translateY(var(--header-height));
 }
 
-nav {
-    display: flex;
-    z-index: 2;
-    justify-content: right;
-    align-items: flex-end;
-}
-
 #logo {
     margin-top: 0.25em;
     margin-left: 0.25em;
+    transition: transform, text-shadow 300ms ease-in-out;
+    align-self: flex-start;
+}
+
+#logo:hover {
+    transform: scale(1.1);
+}
+
+#nav__ham {
+    display: block;
+    margin-right: 0.5rem;
+    cursor: pointer;
+    align-self: flex-end;
 }
 
 #nav {
-    margin-right: 1.2em;
+    /* This is added separate to #nav because otherwise display property of id takes over everything */
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    align-items: center;
     margin-block: auto;
+    transition: width 300ms ease-in-out;
+}
+
+#nav.active {
+    background-color: var(--clr-sec);
+    height: 100vh;
+}
+
+.bar {
+    display: block;
+    width: 1.5rem;
+    height: 0.2rem;
+    margin: 0.3rem auto;
+    background-color: black;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+#nav__ham.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+#nav__ham.active .bar:nth-child(1) {
+    transform: translateY(0.5rem) rotate(45deg);
+}
+
+#nav__ham.active .bar:nth-child(3) {
+    transform: translateY(-0.5rem) rotate(-45deg);
+}
+
+#nav__menu {
+    display: none;
+    opacity: 0;
+    flex-direction: column;
+    background-color: var(--clr-sec);
+    -webkit-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#nav__menu.active {
+    display: flex;
+    opacity: 1;
 }
 
 .nav-item {
-    color: var(--clr-text-light);
-    margin-right: 4em;
+    color: var(--clr-text-dark);
     font-size: 1rem;
     text-decoration: none;
     font-weight: bold;
-    padding-top: 1.5em;
-    padding-bottom: 0.5em;
-    transition: transform, text-shadow 150ms;
+    padding-block: 1rem;
+    padding-inline: 3rem;
+    transition: all 300ms ease-in-out;
 }
 
 .nav-item:hover {
     transform: scale(1.1);
-    text-shadow: 0 0 10px currentColor;
+    text-shadow: 0 0 10px var(--clr-sec);
 }
+
+@media only screen and (min-width: 53rem) {
+    header {
+        justify-content: space-around;
+    }
+
+    #logo {
+        align-self: auto;
+    }
+
+    #nav {
+        height: auto;
+    }
+
+    #nav__menu {
+        margin-block: auto;
+        display: flex;
+        opacity: 1;
+        flex-direction: row;
+        padding-inline: 1rem;
+        padding-block: 0.2rem;
+        justify-content: flex-end;
+        align-items: center;
+        background-color: inherit;
+    }
+    
+    #nav__ham {
+        display: none;
+    }
+  }
 
 /* Footer section */
 

@@ -7,39 +7,57 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="/css/style.css">
 		<link rel="stylesheet" href="/css/about.css">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Satisfy&display=swap" rel="stylesheet">
+		<script src="/js/about.js" defer></script>
+		<script src="/main.js" defer></script>
 	</head>
 	<body>
 		<header id="header">
 			<!--Logo and Nav bar-->
-			<div id="logo">
-				<a href="/"><img src="/images/cap.png" alt="Logo"></a>
-			</div>
-			<span id="ham-menu">----</span>
+			<a href="/" id="logo"><img src="/images/cap.png" alt="Logo"></a>
 			<nav id="nav">
 				<!--About, Experience, Projects, Contact, RESUME-->
-				<a href="/pages/about.html" class="nav-item">About</a>
-				<a href="/pages/experience.html" class="nav-item">Experience</a>
-				<a href="/pages/projects.html" class="nav-item">Projects</a>
-				<a href="/pages/wip.html" class="nav-item">WIP</a>
-				<a href="/pages/contact.html" class="nav-item">Contact</a>
+				<div id="nav__ham">
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</div>
+				<div id="nav__menu">
+					<a href="/pages/about.html" class="nav-item">About</a>
+					<a href="/pages/experience.html" class="nav-item">Experience</a>
+					<a href="/pages/projects.html" class="nav-item">Projects</a>
+					<a href="/pages/wip.html" class="nav-item">WIP</a>
+					<a href="/pages/contact.html" class="nav-item">Contact</a>
+				</div>
 			</nav>
 		</header>
-		<section id="about">
-			<!--About me card-->
-			<h2 id="about-title">ABOUT ME</h2>
-			<div id="about-content" class="font-dark">
-				<p>A Senior Backend Engineer, a budding Game Developer, a novice Web Developer and an awesome Cook! <span class="font-accent">(if you disregard what my wife says)</span></p>
-			</div>
-		</section>
+		<main>
+			<section id="about">
+				<!--About me card-->
+				<div id="about__content" class="font-accent">
+					<div class="about__card">
+						<img src="/images/about-bg.jpg" alt="">
+						<p>Senior Backend Engineer</p>
+					</div>
+					<div class="about__card">
+						<img src="/images/about-bg.jpg" alt="">
+						<p>Budding Game Developer</p>
+					</div>
+					<div class="about__card">
+						<img src="/images/about-bg.jpg" alt="">
+						<p>Novice Web Developer</p>
+					</div>
+					<div class="about__card">
+						<img src="/images/about-bg.jpg" alt="">
+						<p>Awesome Home Cook</p>
+					</div>
+				</div>
+			</section>
+		</main>
 		<footer>
 			<hr>
 			<!--Designed and implementation by Sushant Bhat-->
 			<p class="font-dark">&#169; 2022 Sushant Bhat</p>
 			<a href="https://github.com/sushant-bhat/sushant-bhat.github.io" target="_blank"><img src="/images/github.png" width="32px" alt="Github"></a>
 		</footer>
-		<script src="/main.js"></script>
     </body>
 </html>

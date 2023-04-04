@@ -14,52 +14,57 @@
 	<body>
 		<header id="header">
 			<!--Logo and Nav bar-->
-			<div id="logo">
-				<a href="/"><img src="/images/cap.png" alt="Logo"></a>
-			</div>
-			<span id="ham-menu">----</span>
+			<a href="/" id="logo"><img src="/images/cap.png" alt="Logo"></a>
 			<nav id="nav">
 				<!--About, Experience, Projects, Contact, RESUME-->
-				<a href="/pages/about.html" class="nav-item">About</a>
-				<a href="/pages/experience.html" class="nav-item">Experience</a>
-				<a href="/pages/projects.html" class="nav-item">Projects</a>
-				<a href="/pages/wip.html" class="nav-item">WIP</a>
-				<a href="/pages/contact.html" class="nav-item">Contact</a>
+				<div id="nav__ham">
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</div>
+				<div id="nav__menu">
+					<a href="/pages/about.html" class="nav-item">About</a>
+					<a href="/pages/experience.html" class="nav-item">Experience</a>
+					<a href="/pages/projects.html" class="nav-item">Projects</a>
+					<a href="/pages/wip.html" class="nav-item">WIP</a>
+					<a href="/pages/contact.html" class="nav-item">Contact</a>
+				</div>
 			</nav>
 		</header>
-		<section id="exp">
-			<!--Experience card-->
-			<h2 id="exp-title">EXPERIENCE</h2>
-			<ul id="grid-experience">
-				<li id="walmart-exp">
-					<img src="/images/walmart-logo.png" alt="Walmart Global Tech" class="img-clip-circle">
-					<h3>SDE III@Walmart</h3>
-					<ul>
-						<li>June 2019 - Present</li>
-						<li>Back end engineer in Search team - Ads and Runtime</li>
-						<li>Tech Used: Spring Boot, Intellij, Grafana, Splunk</li>
-					</ul>
-				</li>
-				<li id="soroco-exp">
-					<img src="/images/soroco-logo.png" alt="Soroco Pvt. Ltd." class="img-clip-circle">
-					<h3>SDE II@Soroco</h3>
-					<ul>
-						<li>March 2018 - May 2019</li>
-						<li>Back end engineer in UI automation team.</li>
-						<li>Tech Used: Python, PyCharm, Selenium</li>
-					</ul>
-				</li>
-				<li id="samsung-exp">
-					<img src="/images/samsung-logo.png" alt="Samsung Research insitute" class="img-clip-circle">
-					<h3>SDE@Samsung R&D</h3>
-					<ul>
-						<li>July 2016 - February 2018</li>
-						<li>Android Developer in the Gallery Multimedia team.</li>
-						<li>Tech Used: Android OS, Android Studio, Perforce</li>
-					</ul>
-				</li>
-			</ul>
-		</section>
+		<main>
+			<section id="exp">
+				<!--Experience card-->
+				<ul id="grid-experience">
+					<li id="walmart-exp">
+						<img src="/images/walmart-logo.png" alt="Walmart Global Tech" class="img-clip-circle">
+						<h3>SDE III@Walmart</h3>
+						<ul>
+							<li>June 2019 - Present</li>
+							<li>Back end engineer in Search team - Ads and Runtime</li>
+							<li>Tech Used: Spring Boot, Intellij, Grafana, Splunk</li>
+						</ul>
+					</li>
+					<li id="soroco-exp">
+						<img src="/images/soroco-logo.png" alt="Soroco Pvt. Ltd." class="img-clip-circle">
+						<h3>SDE II@Soroco</h3>
+						<ul>
+							<li>March 2018 - May 2019</li>
+							<li>Back end engineer in UI automation team.</li>
+							<li>Tech Used: Python, PyCharm, Selenium</li>
+						</ul>
+					</li>
+					<li id="samsung-exp">
+						<img src="/images/samsung-logo.png" alt="Samsung Research insitute" class="img-clip-circle">
+						<h3>SDE@Samsung R&D</h3>
+						<ul>
+							<li>July 2016 - February 2018</li>
+							<li>Android Developer in the Gallery Multimedia team.</li>
+							<li>Tech Used: Android OS, Android Studio, Perforce</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+		</main>
 		<footer>
 			<hr>
 			<!--Designed and implementation by Sushant Bhat-->
