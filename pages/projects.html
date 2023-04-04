@@ -7,9 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="/css/style.css">
 		<link rel="stylesheet" href="/css/projects.css">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Satisfy&display=swap" rel="stylesheet">
+		<script src="/js/projects.js" defer></script>
 	</head>
 	<body>
 		<header id="header">
@@ -36,30 +34,32 @@
 				<!--Projects card-->
 				<!--To be displayed as infinite horizontal scroller-->
 				<ul id="projects__list">
-					<li id="project-1">
-						<a href="https://anthat.itch.io/knight-guard" target="_blank" class="font-dark">
-							<img src="/images/knight-guard-ss.png" width="60%" alt="Knight Guard Unity 2D Game">
+					<li id="project__1" class="project__content" data-link="https://anthat.itch.io/knight-guard">
+						<img src="/images/knight-guard-ss.png" alt="Knight Guard Unity 2D Game" class="project__img">
+						<div class="project__desc">
 							<h3>Knight Guard</h3>
 							<p>A 2D platformer where the player can only see the environment with the help of a torch. The catch is, like in real life, the torch runs on battery
 								and batteries tend to run out.</p>
 							<a href="https://github.com/sushant-bhat/KnightGuard" target="_blank"><img src="/images/github-contact.png" alt="Github link"></a>
-						</a>
+						</div>
 					</li>
-					<li id="project-2">
-						<a href="https://github.com/sushant-bhat/Batwing-Rogue" target="_blank" class="font-dark">
-							<img src="/images/projects-bg.jpg" width="60%" alt="Bat Wing Unity 3D Game">
+					<li id="project__2" class="project__content" data-link="https://github.com/sushant-bhat/Batwing-Rogue">
+						<div class="project__desc">
 							<h3>Bat Wing Assault</h3>
 							<p>A 3D Rail Shooter with the premise of an alien attack on Gotham city. And only one man can save the day - A man who dresses like the Bat.</p>
 							<a href="https://github.com/sushant-bhat/Batwing-Rogue" target="_blank"><img src="/images/github-contact.png" alt="Github link"></a>
-						</a>
+						</div>
+						<img src="/images/knight-guard-ss.png" alt="Bat Wing Unity 3D Game" class="project__img-right">					
 					</li>
-					<li id="project-3">
-						<a href="https://anthat.itch.io/floppy-bird" target="_blank" class="font-dark">
-							<img src="/images/floppy-bird-ss.png" width="60%" alt="Floppy Bird Unity 2D Game">
+					<li id="project__3" class="project__content" data-link="https://anthat.itch.io/floppy-bird">
+						<img src="/images/floppy-bird-ss.png" width="60%" alt="Floppy Bird Unity 2D Game" class="project__img">
+						<div class="project__desc">
 							<h3>Floppy Bird</h3>
 							<p>Started as a clone of Flappy bird made as a 1 day challenge, this is evolving into an elegant game with a sweet story.</p>
-							<a href="https://github.com/sushant-bhat/FloppyBird" target="_blank"><img src="/images/github-contact.png" alt="Github link"></a>
-						</a>
+							<a href="https://github.com/sushant-bhat/FloppyBird" target="_blank">
+								<img src="/images/github-contact.png" alt="Github link">
+							</a>
+						</div>
 					</li>
 				</ul>
 			</section>

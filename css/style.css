@@ -173,12 +173,12 @@ header {
     padding: 1rem;
     align-items: center;
     margin-block: auto;
-    height: 100vh;
     transition: width 300ms ease-in-out;
 }
 
 #nav.active {
     background-color: var(--clr-sec);
+    height: 100vh;
 }
 
 .bar {
