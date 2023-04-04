@@ -14,18 +14,10 @@ window.addEventListener("scroll", () => {
 });
 
 let navHam = document.getElementById('nav__ham')
-let nav = document.getElementById('nav')
+let navMenu = document.getElementById('nav__menu')
 if (navHam) {
     navHam.addEventListener('click', () => {
-        navHam.classList.add('elem-hide')
-        nav.classList.remove('elem-hide')
-    })
-}
-
-let navCloseBtn = document.getElementById('nav__close__btn')
-if (navCloseBtn) {
-    navCloseBtn.addEventListener('click', () => {
-        navHam.classList.remove('elem-hide')
-        nav.classList.add('elem-hide')
+        navHam.classList.toggle('active')
+        navMenu.classList.toggle('active')
     })
 }

@@ -52,6 +52,10 @@
     backdrop-filter: blur(10px);
 }
 
+.elem-hide {
+    display: none;
+}
+
 body {
     background-color: var(--clr-primary);
 }
@@ -131,7 +135,7 @@ header {
     width: 100%;
     z-index: 2;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     padding-bottom: 0.8em;
     transition: transform 0.2s;
 }
@@ -144,33 +148,59 @@ header {
     margin-top: 0.25em;
     margin-left: 0.25em;
     transition: transform, text-shadow 150ms;
+    align-self: flex-start;
 }
 
 #logo:hover {
     transform: scale(1.1);
 }
 
-nav {
-    /* This is added separate to #nav because otherwise display property of id takes over everything */
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    align-items: center;
+#nav__ham {
+    display: block;
+    margin-right: 0.5rem;
+    cursor: pointer;
+    align-self: flex-end;
 }
 
-.elem-hide {
-    display: none;
-}
-
-#nav {
-    margin-block: auto;
+#nav__ham.active {
     background-color: hsla(190, 25%, 66%, 0.95);
 }
 
-#nav__ham {
-    margin-right: 0.5rem;
-    font-size: 2rem;
-    cursor: pointer;
+#nav__menu {
+    /* This is added separate to #nav because otherwise display property of id takes over everything */
+    display: none;
+    flex-direction: column;
+    padding: 1rem;
+    align-items: center;
+    margin-block: auto;
+    background-color: hsla(190, 25%, 66%, 0.95);
+    transition: all 0.3s ease-in-out;
+}
+
+#nav__menu.active {
+    display: flex;
+}
+
+.bar {
+    display: block;
+    width: 1.5rem;
+    height: 0.2rem;
+    margin: 0.3rem auto;
+    background-color: black;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+#nav__ham.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+#nav__ham.active .bar:nth-child(1) {
+    transform: translateY(0.5rem) rotate(45deg);
+}
+
+#nav__ham.active .bar:nth-child(3) {
+    transform: translateY(-0.5rem) rotate(-45deg);
 }
 
 .nav-item {
@@ -188,35 +218,23 @@ nav {
     text-shadow: 0 0 10px currentColor;
 }
 
-#nav__close__btn {
-    font-size: 1.5rem;
-    align-self: flex-end;
-    cursor: pointer;
-}
-
 @media only screen and (min-width: 53rem) {
     header {
         justify-content: space-around;
     }
 
-    #nav {
+    #nav__menu {
         margin-block: auto;
         display: flex;
         flex-direction: row;
         padding-inline: 1rem;
         padding-block: 0.2rem;
+        justify-content: flex-end;
         align-items: center;
         background-color: inherit;
     }
     
     #nav__ham {
-        margin-right: 0.5rem;
-        font-size: 2rem;
-        cursor: pointer;
-        display: none;
-    }
-
-    #nav__close__btn {
         display: none;
     }
   }
