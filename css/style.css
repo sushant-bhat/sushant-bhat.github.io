@@ -151,7 +151,7 @@ header {
 #logo {
     margin-top: 0.25em;
     margin-left: 0.25em;
-    transition: transform, text-shadow 300ms;
+    transition: transform, text-shadow 300ms ease-in-out;
     align-self: flex-start;
 }
 
@@ -222,9 +222,9 @@ header {
     font-size: 1rem;
     text-decoration: none;
     font-weight: bold;
-    padding-block: 1.5em;
+    padding-block: 1rem;
     padding-inline: 3rem;
-    transition: transform, text-shadow 150ms;
+    transition: all 300ms ease-in-out;
 }
 
 .nav-item:hover {
@@ -265,8 +265,6 @@ header {
 /* Footer section */
 
 footer {
-    position: sticky;
-    bottom: 0;
     text-align: center;
     margin: auto;
     width: 90%;
