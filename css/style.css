@@ -229,7 +229,7 @@ header {
 
 .nav-item:hover {
     transform: scale(1.1);
-    text-shadow: 0 0 10px currentColor;
+    text-shadow: 0 0 10px var(--clr-sec);
 }
 
 @media only screen and (min-width: 53rem) {
