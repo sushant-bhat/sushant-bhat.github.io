@@ -1,16 +1,17 @@
 #exp {
-    min-height: 88vh;
+    min-height: 100vh;
     width: 70%;
     margin: auto;
 }
 
-#exp-title {
+.exp__title {
     text-align: center;
-    margin-top: 4rem;
-    color: var(--clr-sec);
+    font-size: 1.5rem;
+    text-decoration: underline;
+    text-decoration-color: var(--clr-accent);
 }
 
-#grid-experience {
+#exp__list {
     display: grid;
     gap: 1rem;
     margin-bottom: 2rem;
@@ -22,11 +23,9 @@
     'samsung-exp';
 }
 
-#grid-experience > li {
-    text-align: center;
-    border: 2px solid var(--clr-sec);
-    border-radius: 2em;
-    padding: 2em;
+#exp__list > li {
+    border-radius: 2rem;
+    padding: 2rem;
 }
 
 #walmart-exp {
@@ -41,14 +40,37 @@
     grid-area: samsung-exp;
 }
 
-@media only screen and (min-width: 53rem) {
-    #grid-experience {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas: 
-        'walmart-exp . .'
-        '. soroco-exp .'
-        '. . samsung-exp';
+@media only screen and (min-width: 57rem) {
+    #exp__list {
+        display: block;
+        text-align: center;
     }
     
+    .exp__item {
+        min-height: 100vh;
+        display: flex;
+        color: var(--clr-text-light);
+    }
+    
+    .exp__img {
+        opacity: 0;
+        transform: translateX(-100%);
+        transition: all 1s;
+    }
+
+    .exp__img.show {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
+    .exp__info > li {
+        opacity: 0;
+        transform: translateX(100%);
+        transition: all 1s;
+    }
+
+    .exp__info > li.show {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }

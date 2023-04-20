@@ -18,10 +18,12 @@ window.addEventListener("scroll", () => {
 let navHam = document.getElementById('nav__ham')
 let navMenu = document.getElementById('nav__menu')
 let nav = document.getElementById('nav')
+let navItems = document.querySelectorAll('.nav-item')
 if (navHam) {
     navHam.addEventListener('click', () => {
         nav.classList.toggle('active')
         navHam.classList.toggle('active')
         navMenu.classList.toggle('active')
+        navItems.forEach(navItem => navItem.classList.toggle('active'))
     })
 }
