@@ -64,6 +64,7 @@ body {
 
 main {
     margin-top: calc(-1 * var(--header-height));
+    min-height: 100vh;
 }
 
 span {
