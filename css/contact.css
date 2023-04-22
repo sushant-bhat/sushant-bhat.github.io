@@ -81,13 +81,37 @@ textarea {
 }
 
 @media only screen and (min-width: 57rem) {
-    #contact__content {
-        grid-template-columns: 1fr 15fr 1fr;
-        grid-template-areas: 
-        'prof-media grid-contact-form social-media';
+    main {
+        display: grid;
+        height: auto;
+        grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
+        grid-template-rows: 2fr 1fr;
+        grid-template-areas:
+        ". message__section contact__section ."
+        ". message__section media__section .";
     }
 
-    #contact__form {
-        max-width: 90rem;
+    #message__title {
+        font-size: 4rem;
+        line-height: 1em;
+    }
+
+    #message__content {
+        font-size: 1rem;
+        padding-top: 4rem;
+    }
+
+    #message__section {
+        grid-area: message__section;
+        padding-block: 1em;
+        justify-self: center;
+    }
+
+    #contact__section {
+        grid-area: contact__section;
+    }
+
+    #media__section {
+        grid-area: media__section;
     }
 }
