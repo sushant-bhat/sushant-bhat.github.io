@@ -162,27 +162,26 @@ header {
     transform: scale(1.1);
 }
 
-#nav__ham {
-    display: block;
-    margin-right: 0.5rem;
-    cursor: pointer;
-    align-self: flex-end;
-}
-
 #nav {
-    /* This is added separate to #nav because otherwise display property of id takes over everything */
     display: flex;
     flex-direction: column;
     padding: 1rem;
     align-items: center;
     margin-block: auto;
     color: var(--clr-text-light);
-    transition: width 300ms ease-in-out;
+    transition: height 300ms ease-in-out;
 }
 
 #nav.active {
     background-color: var(--clr-sec);
     height: 100vh;
+}
+
+#nav__ham {
+    display: block;
+    margin-right: 0.5rem;
+    cursor: pointer;
+    align-self: flex-end;
 }
 
 .bar {
