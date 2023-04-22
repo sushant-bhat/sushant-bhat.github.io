@@ -224,6 +224,7 @@ header {
 }
 
 .nav-item {
+    position: relative;
     color: var(--clr-text-light);
     font-size: 1.2rem;
     text-decoration: none;
@@ -240,7 +241,24 @@ header {
 .nav-item:hover {
     transform: scale(1.1);
     text-shadow: 0 0 10px var(--clr-sec);
-    border-bottom: 0.2rem solid var(--clr-accent);
+}
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0.75rem;
+    left: 10%;
+    width: 80%;
+    height: 0.1em;
+    background-color: var(--clr-accent);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 150ms ease-in;
+}
+
+.nav-item:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
 @media only screen and (min-width: 57rem) {

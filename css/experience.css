@@ -41,23 +41,33 @@
 
 @media only screen and (min-width: 57rem) {
     #exp__list {
+        min-height: 100vh;
         display: block;
         text-align: center;
     }
     
     .exp__item {
+        display: grid;
         min-height: 100vh;
-        display: flex;
+        position: relative;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
         align-items: center;
+        overflow: hidden;
         color: var(--clr-text-light);
     }
     
     .exp__img {
-        width: 20%;
+        grid-column: 1 / 1;
+        width: 50%;
         object-fit: cover;
         opacity: 0;
         transform: translateX(-100%);
         transition: all 1s;
+    }
+
+    .exp__info {
+        grid-column: 2 / -1;
     }
 
     .exp__img.show {
