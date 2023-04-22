@@ -30,40 +30,49 @@
 			</nav>
 		</header>
 		<main>
-			<section id="contact" class="font-dark">
+			<section id="message__section">
+				<h1 id="message__title">
+					Lets catch up.
+				</h1>
+				<p id="message__content">
+					Send me a message.<br>
+					Can be a rant, appreciation or a simple <span id="fancy__text">HELLO!!</span>
+				</p>
+			</section>
+			<section id="contact__section">
 				<!--Contact card-->
-				<div id="contact__content">
-					<form action="" method="post" id="contact__form">
-						<div id="contact__name">
-							<input type="text" name="msg_name" id="msg_name" class="input-text" placeholder="Name*">
-						</div>
-						<div id="contact__email">
-							<input type="email" required name="msg_email" id="msg_email" class="input-text" placeholder="E-mail*">
-						</div>
-						<div id="contact__msg">
-							<textarea name="email_msg" required id="msg__content" maxlength="140" rows="6" placeholder="Drop a message and be kind please..." class="input-text"></textarea>
-						</div>
-						<div id="send__btn">
-							<input type="submit" value="Send" class="btn-primary">
-						</div>
-					</form>
-					<div id="prof__media">
-						<a href="https://www.linkedin.com/in/sushant-bhat-48846b103/" target="_blank"><img src="/images/linkedin.png" alt="Linkedin"></a>
-						<a href="https://github.com/sushant-bhat" target="_blank"><img src="/images/github-contact.png" alt="Github"></a>
-						<a href="https://medium.com/@sushant.bhat.102" target="_blank"><img src="/images/medium.png" alt="Medium"></a>
+				<form action="" method="post" id="contact__form">
+					<div class="form__field">
+						<label for="form__name">Name</label>
+						<input type="text" name="form__name" id="form__name" class="field" placeholder="ABC">
 					</div>
-					<div id="social__media">
-						<a href="https://www.instagram.com/ant_hat/" target="_blank"><img src="/images/instagram.png" alt="Instagram"></a>
-						<a href="https://www.facebook.com/sushant.bhat.50" target="_blank"><img src="/images/facebook.png" alt="Facebook"></a>
-						<a href="https://twitter.com/SoShantButNoisy" target="_blank"><img src="/images/twitter.png" alt="Twitter"></a>
+					<div class="form__field">
+						<label for="form__email">Email</label>
+						<input type="email" required name="form__email" id="form__email" class="field" placeholder="abc@mail.com">
 					</div>
-				</div>
+					<div class="form__field">
+						<label for="form__msg">Message</label>
+						<textarea name="form__msg" id="form__msg" maxlength="140" rows="6" required placeholder="Drop a message and be kind please..." class="field"></textarea>
+					</div>
+					<button id="form__send__btn">SEND</button>
+				</form>
+			</section>
+			<section id="media__section">
+				<ul id="prof__media" class="media__links">
+					<a href="https://www.linkedin.com/in/sushant-bhat-48846b103/" target="_blank"><img src="/images/linkedin.png" alt="Linkedin"></a>
+					<a href="https://github.com/sushant-bhat" target="_blank"><img src="/images/github-contact.png" alt="Github"></a>
+					<a href="https://medium.com/@sushant.bhat.102" target="_blank"><img src="/images/medium.png" alt="Medium"></a>
+				</ul>
+				<ul id="social__media" class="media__links">
+					<a href="https://www.instagram.com/ant_hat/" target="_blank"><img src="/images/instagram.png" alt="Instagram"></a>
+					<a href="https://www.facebook.com/sushant.bhat.50" target="_blank"><img src="/images/facebook.png" alt="Facebook"></a>
+					<a href="https://twitter.com/SoShantButNoisy" target="_blank"><img src="/images/twitter.png" alt="Twitter"></a>
+				</ul>
 			</section>
 		</main>
 		<footer>
-			<hr>
 			<!--Designed and implementation by Sushant Bhat-->
-			<p class="font-dark">&#169; 2022 Sushant Bhat</p>
+			<p class="font-dark">&#169; 2023 Sushant Bhat</p>
 			<a href="https://github.com/sushant-bhat/sushant-bhat.github.io" target="_blank"><img src="/images/github.png" width="32px" alt="Github"></a>
 		</footer>
     </body>
