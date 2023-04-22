@@ -1,0 +1,9 @@
+#hero__section {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+}
+
+#hero__img {
+    width: 50%;
+}
