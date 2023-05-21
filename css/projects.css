@@ -34,7 +34,6 @@
 
 #projects-list li:hover {
     box-shadow: 0px 0px 40px -2px var(--clr-sec);
-    cursor: pointer;
 }
 
 .project__content {
@@ -78,7 +77,6 @@
         display: block;
         position: relative;
         min-height: 100vh;
-        cursor: pointer;
         transition: transform 800ms ease;
     }
 

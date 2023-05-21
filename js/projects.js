@@ -3,9 +3,10 @@ const observer = new IntersectionObserver((entries) => {
         console.log(entry)
         if(entry.isIntersecting) {
             entry.target.classList.add('show')
-        } else {
-            entry.target.classList.remove('show')
         }
+        // } else {
+        //     entry.target.classList.remove('show')
+        // }
     })
 })
 
@@ -17,13 +18,14 @@ projectContents.forEach(content => {
     let img = content.querySelector('.project__img')
     let imgr = content.querySelector('.project__img-right')
     content.addEventListener('mouseleave', () => {
-        desc.classList.remove('active')
-        if (img) {
-            img.classList.remove('active')
-        }
-        if (imgr) {
-            imgr.classList.remove('active')
-        }
+        // desc.classList.remove('active')
+        cursor.classList.remove('hover')
+        // if (img) {
+        //     img.classList.remove('active')
+        // }
+        // if (imgr) {
+        //     imgr.classList.remove('active')
+        // }
     })
     content.addEventListener('click', () => {
         let url = content.getAttribute('data-link')
@@ -35,6 +37,7 @@ projectContents.forEach(content => {
             console.log('image hover')
             desc.classList.add('active')
             img.classList.add('active')
+            cursor.classList.add('hover')
         })
     }
     if (imgr) {
@@ -42,6 +45,7 @@ projectContents.forEach(content => {
         imgr.addEventListener('mouseenter', () => {
             desc.classList.add('active')
             imgr.classList.add('active')
+            cursor.classList.add('hover')
         })
     }
 })

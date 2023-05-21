@@ -96,12 +96,13 @@ ul {
     height: 15px;
     border: 2px solid white;
     border-radius: 50%;
-    position: absolute;
+    position: fixed;
     z-index: 100;
     pointer-events: none;
+
 }
 
-.cursor.hover {
+.hover {
     border: 2px solid var(--clr-accent);
     animation: cursorhover 1s infinite alternate;
 }
