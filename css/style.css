@@ -305,5 +305,5 @@ footer::before {
     width: 90%;
     height: 2px;
     margin-left: 5%;
-    background-color: hsl(0, 0%, 73%);
+    background-color: var(--clr-accent);
 }

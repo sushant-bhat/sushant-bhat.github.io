@@ -40,10 +40,15 @@ textarea {
 
 .field {
     border: none;
+    outline: none;
     border-radius: 0.5em;
     padding: 0.5em;
     color: var(--clr-text-light);;
     background-color: hsl(0, 0%, 43%);
+}
+
+.field:focus {
+    outline: none;
 }
 
 ::placeholder {
@@ -83,12 +88,13 @@ textarea {
 @media only screen and (min-width: 57rem) {
     main {
         display: grid;
-        height: auto;
+        min-height: 90vh;
+        align-items: self-start;
         grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
         grid-template-rows: 2fr 1fr;
         grid-template-areas:
         ". message__section contact__section ."
-        ". message__section media__section .";
+        ". . media__section .";
     }
 
     #message__title {

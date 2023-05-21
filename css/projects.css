@@ -12,10 +12,20 @@
 }
 
 .projects__title {
-    text-align: center;
-    text-decoration: underline;
-    text-decoration-color: var(--clr-accent);
-    font-size: 1.5rem;
+    position: relative;
+    font-size: 1.75rem;
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.projects__title::after {
+    content: '';
+    position: absolute;
+    width: 40%;
+    height: 2px;
+    background-color: var(--clr-accent);
+    left: 0;
+    bottom: 1rem;
 }
 
 #projects__list {
