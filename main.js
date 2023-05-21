@@ -2,6 +2,21 @@ const header = document.querySelector("header");
 const rootElem = document.querySelector(':root');
 rootElem.style.setProperty('--header-height', -1 * header.offsetHeight + "px");
 let lastScrollY = window.scrollY;
+let cursor = document.querySelector('.cursor')
+let hoverables = document.querySelectorAll('a')
+
+hoverables.forEach(elem => elem.addEventListener('mouseover', e => {
+    cursor.classList.add('hover')
+}))
+
+
+hoverables.forEach(elem => elem.addEventListener('mouseleave', e => {
+    cursor.classList.remove('hover')
+}))
+
+document.addEventListener('mousemove', e => {
+    cursor.setAttribute('style', 'top: ' + (e.pageY - header.offsetHeight - 10) + 'px; left: ' + (e.pageX - 10) + 'px;')
+})
 
 window.addEventListener("scroll", () => {
     if (lastScrollY < window.scrollY) {

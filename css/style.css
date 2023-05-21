@@ -26,6 +26,7 @@
     font-family: 'Mukta', sans-serif;
     margin: 0;
     padding: 0;
+    cursor: none;
 }
 
 .font-dark {
@@ -90,6 +91,30 @@ ul {
     list-style-type: none;
 }
 
+.cursor {
+    width: 15px;
+    height: 15px;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 100;
+    pointer-events: none;
+}
+
+.cursor.hover {
+    border: 2px solid var(--clr-accent);
+    animation: cursorhover 1s infinite alternate;
+}
+
+@keyframes cursorhover {
+    from {
+        transform: scale(1.5);
+    }
+    to {
+        transform: scale(2);
+    }
+}
+
 .clip__circle {
     display: block;
     -webkit-clip-path: circle(50% at 50% 50%);
@@ -119,7 +144,6 @@ ul {
     border: 1px solid var(--clr-accent);
     border-radius: 5px;
     font-size: 1.2rem;
-    cursor: pointer;
 }
 
 .btn-primary:hover {
@@ -177,7 +201,6 @@ header {
 #nav__ham {
     display: block;
     margin-right: 0.5rem;
-    cursor: pointer;
     align-self: flex-end;
 }
 
