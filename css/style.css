@@ -281,6 +281,13 @@ header {
     transform-origin: left;
 }
 
+.resume__btn {
+    border: 1px solid var(--clr-accent);
+    border-radius: 0.5rem;
+    background-color: var(--clr-accent);
+    color: var(--clr-text-dark);
+}
+
 @media only screen and (min-width: 57rem) {
     header {
         justify-content: space-around;
