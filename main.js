@@ -6,12 +6,27 @@ let cursor = document.querySelector('.cursor')
 let hoverables = document.querySelectorAll('a, button')
 
 hoverables.forEach(elem => elem.addEventListener('mouseover', e => {
-    cursor.classList.add('hover')
+    let computedStyle = window.getComputedStyle(elem)
+
+    // Get the color value from the computed style
+    let elementColor = computedStyle.getPropertyValue('background-color');
+    console.log(elementColor)
+
+    // Specify the given color for comparison
+    let accentColor = 'rgb(194, 185, 128)' // Example: Red color in hexadecimal format
+
+    // Compare the colors
+    if (elementColor === accentColor) {
+        cursor.classList.add('hover__on__accent')
+    } else {
+        cursor.classList.add('hover')
+    }
 }))
 
 
 hoverables.forEach(elem => elem.addEventListener('mouseleave', e => {
     cursor.classList.remove('hover')
+    cursor.classList.remove('hover__on__accent')
 }))
 
 document.addEventListener('mousemove', e => {

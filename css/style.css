@@ -11,7 +11,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@500&display=swap');
 
 :root {
-    --clr-primary: hsl(160, 100%, 97%);
+    --clr-primary: hsl(211, 15%, 33%);
     --clr-sec: hsl(120, 24%, 96%);
     --clr-accent: hsl(52, 35%, 63%);
     --clr-text-dark: hsl(0, 0%, 0%);
@@ -60,7 +60,7 @@
 body {
     position: relative;
     min-height: 100vh;
-    background-color: hsl(211, 15%, 33%);
+    background-color: var(--clr-primary);
     background-image: linear-gradient(315deg, hsl(211, 15%, 33%) 0%, hsl(212, 19%, 19%) 74%);
 }
 
@@ -104,6 +104,11 @@ ul {
 
 .hover {
     border: 2px solid var(--clr-accent);
+    animation: cursorhover 1s infinite alternate;
+}
+
+.hover__on__accent {
+    border: 2px solid var(--clr-primary);
     animation: cursorhover 1s infinite alternate;
 }
 

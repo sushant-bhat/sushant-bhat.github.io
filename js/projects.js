@@ -17,20 +17,6 @@ projectContents.forEach(content => {
     let desc = content.querySelector('.project__desc')
     let img = content.querySelector('.project__img')
     let imgr = content.querySelector('.project__img-right')
-    content.addEventListener('mouseleave', () => {
-        // desc.classList.remove('active')
-        cursor.classList.remove('hover')
-        // if (img) {
-        //     img.classList.remove('active')
-        // }
-        // if (imgr) {
-        //     imgr.classList.remove('active')
-        // }
-    })
-    content.addEventListener('click', () => {
-        let url = content.getAttribute('data-link')
-        window.open(url, '_blank')
-    })
     if (img) {
         observer.observe(img)
         img.addEventListener('mouseenter', () => {
@@ -39,6 +25,13 @@ projectContents.forEach(content => {
             img.classList.add('active')
             cursor.classList.add('hover')
         })
+        img.addEventListener('click', () => {
+            let url = content.getAttribute('data-link')
+            window.open(url, '_blank')
+        })
+        img.addEventListener('mouseleave', e => {
+            cursor.classList.remove('hover')
+        })
     }
     if (imgr) {
         observer.observe(imgr)
@@ -46,6 +39,13 @@ projectContents.forEach(content => {
             desc.classList.add('active')
             imgr.classList.add('active')
             cursor.classList.add('hover')
+        })
+        imgr.addEventListener('click', () => {
+            let url = content.getAttribute('data-link')
+            window.open(url, '_blank')
+        })
+        imgr.addEventListener('mouseleave', e => {
+            cursor.classList.remove('hover')
         })
     }
 })
