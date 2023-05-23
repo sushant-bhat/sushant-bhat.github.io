@@ -11,12 +11,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@500&display=swap');
 
 :root {
-    --clr-primary: hsl(211, 15%, 33%);
+    --clr-primary: hsl(210, 6%, 7%);
     --clr-sec: hsl(120, 24%, 96%);
     --clr-accent: hsl(52, 35%, 63%);
     --clr-text-dark: hsl(0, 0%, 0%);
     --clr-text-light: hsl(240, 10%, 96%);
     --header-height: 50px;
+    --scrollbar-width: 0.5em;
+}
+
+::-webkit-scrollbar {
+    width: var(--scrollbar-width)
+}
+
+::-webkit-scrollbar-track {
+    margin-block: 1em;
+}
+
+::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(var(--clr-accent), hsl(52, 45%, 13%));
+    box-shadow: inset 0 0 5px var(--clr-accent);
+    border-radius: 100vw;
 }
 
 *,
@@ -61,7 +76,8 @@ body {
     position: relative;
     min-height: 100vh;
     background-color: var(--clr-primary);
-    background-image: linear-gradient(315deg, hsl(211, 15%, 33%) 0%, hsl(212, 19%, 19%) 74%);
+    color: var(--clr-text-light);
+    /* background-image: linear-gradient(315deg, hsl(211, 15%, 33%) 0%, hsl(212, 19%, 19%) 74%); */
 }
 
 main {
@@ -96,6 +112,7 @@ ul {
     height: 15px;
     border: 2px solid white;
     border-radius: 50%;
+    box-shadow: inset 0 0 0.25em white, 0 0 0.25em white;
     position: fixed;
     z-index: 100;
     pointer-events: none;
@@ -103,12 +120,15 @@ ul {
 }
 
 .hover {
+    background-color: transparent;
     border: 2px solid var(--clr-accent);
+    box-shadow: inset 0 0 0.25em var(--clr-accent), 0 0 0.25em var(--clr-accent);
     animation: cursorhover 1s infinite alternate;
 }
 
 .hover__on__accent {
     border: 2px solid var(--clr-primary);
+    box-shadow: inset 0 0 0.25em var(--clr-primary), 0 0 0.25em var(--clr-primary);
     animation: cursorhover 1s infinite alternate;
 }
 
@@ -276,6 +296,7 @@ header {
     width: 80%;
     height: 0.1em;
     background-color: var(--clr-accent);
+    box-shadow: 0 0 0.25em var(--clr-accent);
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 150ms ease-in;
