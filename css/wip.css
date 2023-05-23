@@ -1,7 +1,6 @@
 @import "style.css";
 
 #wip {
-    min-height: 88vh;
     width: 70%;
     margin: auto;
 }
@@ -12,30 +11,35 @@
     color: var(--clr-sec);
 }
 
-.wip__list {
-    display: grid;
-    margin: auto;
-    gap: 4rem;
-    grid-template-columns: 1fr;
-}
-
-.wip__list li {
+.wip__item {
+    min-height: 100vh;
     text-align: center;
-    border: 2px solid var(--clr-sec);
     border-radius: 2rem;
     padding: 1em;
     transition: transform 800ms ease;
 }
 
-.wip__list li:hover {
-    box-shadow: 0px 0px 40px -2px var(--clr-sec);
-}
-
 @media only screen and (min-width: 53rem) {
-    .wip__list {
+    .wip__item {
         display: grid;
-        margin: auto;
-        gap: 2rem;
-        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        gap: 1rem;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .wip__item img {
+        border: 2px solid var(--clr-accent);
+    }
+
+    .wip__desc h3 {
+        font-size: 4vw;
+    }
+
+    .wip__desc p {
+        font-size: 1vw;
+        line-height: 2;
+        max-width: 60ch;
+        padding-inline: 2em;
+        padding-block: 1em;
     }
 }

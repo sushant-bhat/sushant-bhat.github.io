@@ -50,14 +50,15 @@
 
 .projects__title {
     display: inline-block;
+    color: var(--clr-accent);
     width: 80%;
     position: relative;
-    font-size: 1.75rem;
+    font-size: 3vw;
     padding-bottom: 0.5em;
     margin-bottom: 0.5em;
 }
 
-.projects__title::after {
+/* .projects__title::after {
     content: '';
     position: absolute;
     width: 80%;
@@ -65,10 +66,13 @@
     background-color: var(--clr-accent);
     left: 0;
     bottom: 1rem;
-}
+} */
 
 .project__desc > p {
-    line-height: 2em;
+    font-size: 1vw;
+    line-height: 2;
+    max-width: 60ch;
+    padding-right: 3em;
 }
 
 .project__desc > a {
