@@ -25,6 +25,7 @@
         align-items: center;
         gap: 1rem;
         grid-template-columns: 1fr 1fr;
+        position: relative;
     }
 
     .wip__item img {
@@ -33,6 +34,14 @@
 
     .wip__desc h3 {
         font-size: 4vw;
+        transform: translateX(-100%);
+        opacity: 0;
+        transition: transform 500ms ease-in-out, opacity 200ms ease-in-out 300ms;
+    }
+
+    .wip__desc h3.show {
+        transform: translateX(0);
+        opacity: 1;
     }
 
     .wip__desc p {
@@ -41,5 +50,13 @@
         max-width: 60ch;
         padding-inline: 2em;
         padding-block: 1em;
+        transform: translateY(-100%);
+        opacity: 0;
+        transition: all 300ms ease-in-out 500ms;
+    }
+
+    .wip__desc p.show {
+        transform: translateY(0);
+        opacity: 1;
     }
 }
