@@ -74,7 +74,6 @@
 
 body {
     position: relative;
-    min-height: 100vh;
     background-color: var(--clr-primary);
     color: var(--clr-text-light);
     /* background-image: linear-gradient(315deg, hsl(211, 15%, 33%) 0%, hsl(212, 19%, 19%) 74%); */
@@ -115,8 +114,8 @@ ul {
     box-shadow: inset 0 0 0.25em white, 0 0 0.25em white;
     position: fixed;
     z-index: 100;
+    transform: translate(-50%, -50%);
     pointer-events: none;
-
 }
 
 .hover {

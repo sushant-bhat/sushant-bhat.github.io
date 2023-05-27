@@ -45,7 +45,7 @@
     }
 
     .wip__desc p {
-        font-size: 1vw;
+        font-size:  clamp(0.8rem, 1vw, 4rem);
         line-height: 2;
         max-width: 60ch;
         padding-inline: 2em;
