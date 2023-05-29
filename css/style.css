@@ -11,7 +11,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@500&display=swap');
 
 :root {
-    --clr-primary: hsl(210, 6%, 7%);
+    --clr-primary: hsl(0, 0%, 13%);
     --clr-sec: hsl(120, 24%, 96%);
     --clr-accent: hsl(52, 35%, 63%);
     --clr-text-dark: hsl(0, 0%, 0%);

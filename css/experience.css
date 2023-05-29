@@ -5,8 +5,8 @@
 
 .exp__title {
     text-align: center;
+    color: var(--clr-accent);
     font-size: 2rem;
-    text-decoration: underline;
     text-decoration-color: var(--clr-accent);
 }
 
@@ -87,7 +87,7 @@
     .exp__info > li {
         opacity: 0;
         border-radius: 2em;
-        background-color: var(--clr-text-dark);
+        background-color: hsl(0, 0%, 0%);
         transform: translateX(100%);
         transition: all 600ms ease-in-out;
         transition-delay: var(--base-time);
