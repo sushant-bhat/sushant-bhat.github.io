@@ -15,3 +15,8 @@ let wipDescPara = document.querySelectorAll('.wip__desc p')
 wipDescPara.forEach(para => {
     observer.observe(para)
 })
+
+let wipDescLinks = document.querySelectorAll('.wip__desc span')
+wipDescLinks.forEach(link => {
+    observer.observe(link)
+})
