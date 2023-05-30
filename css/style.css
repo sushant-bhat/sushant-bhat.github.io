@@ -76,7 +76,8 @@ body {
     position: relative;
     background-color: var(--clr-primary);
     color: var(--clr-text-light);
-    /* background-image: linear-gradient(315deg, hsl(211, 15%, 33%) 0%, hsl(212, 19%, 19%) 74%); */
+    background-image: radial-gradient(hsla(0, 30%, 4%, 0.16), transparent);
+    background-size: 2rem 2rem;
 }
 
 main {
