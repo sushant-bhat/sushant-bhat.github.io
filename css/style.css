@@ -311,8 +311,11 @@ header {
 }
 
 .resume__btn {
-    border: 1px solid var(--clr-accent);
+    border: 1px solid black;
     border-radius: 0.5rem;
+    font-size: 1.1rem;
+    padding-inline: 1em;
+    padding-block: 0.5em;
     background-color: var(--clr-accent);
     color: var(--clr-text-dark);
 }
@@ -335,7 +338,8 @@ header {
         display: flex;
         opacity: 1;
         flex-direction: row;
-        padding-inline: 1rem;
+        padding-inline: 0.2rem;
+        gap: 1rem;
         padding-block: 0.2rem;
         justify-content: flex-end;
         align-items: center;
