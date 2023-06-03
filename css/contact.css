@@ -6,6 +6,12 @@ textarea {
     resize: none;
 }
 
+main {
+    min-height: 100svh;
+    max-width: 31rem;
+    margin-inline: auto;
+}
+
 #message__section {
     color: var(--clr-text-light);
     padding-inline: 1em;
@@ -89,6 +95,7 @@ textarea {
     main {
         display: grid;
         min-height: 90vh;
+        max-width: none;
         align-items: self-start;
         grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
         grid-template-rows: 2fr 1fr;
