@@ -1,25 +1,13 @@
-
-// let timer = null;
-// window.addEventListener('scroll', function() {
-//     console.log("Scroll event")
-//     let scrollbarWidth = rootElem.style.getPropertyValue('--scrollbar-width')
-//     if (scrollbarWidth === "0") {
-//         rootElem.style.setProperty('--scrollbar-width', "0.5em");
-//     }
-//     if (timer !== null) {
-//         this.clearTimeout(timer)
-//     }
-//     timer = setTimeout(() => {
-//         rootElem.style.setProperty('--scrollbar-width', "0");
-//     }, 100)
-// }, false);
-
 const header = document.querySelector("header");
 const rootElem = document.querySelector(':root');
 rootElem.style.setProperty('--header-height', -1 * header.offsetHeight + "px");
 let lastScrollY = window.scrollY;
 let cursor = document.querySelector('.cursor')
 let hoverables = document.querySelectorAll('a, button')
+
+document.addEventListener('mouseleave', (e) => {
+    cursor.style.display = "none"
+})
 
 hoverables.forEach(elem => elem.addEventListener('mouseover', e => {
     let computedStyle = window.getComputedStyle(elem)
