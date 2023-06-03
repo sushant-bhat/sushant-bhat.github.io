@@ -108,41 +108,7 @@ ul {
 }
 
 .cursor {
-    width: 15px;
-    height: 15px;
-    border: 2px solid white;
-    border-radius: 50%;
-    box-shadow: inset 0 0 0.25em white, 0 0 0.25em white;
-    position: fixed;
-    z-index: 100;
-    transform-origin: 100% 100%;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-}
-
-.hover {
-    background-color: transparent;
-    border: 2px solid var(--clr-accent);
-    box-shadow: inset 0 0 0.25em var(--clr-accent), 0 0 0.25em var(--clr-accent);
-    animation: cursorhover 1s infinite alternate;
-}
-
-.hover__on__accent {
-    border: 2px solid var(--clr-primary);
-    transform: translate(-50%, -50%);
-    box-shadow: inset 0 0 0.25em var(--clr-primary), 0 0 0.25em var(--clr-primary);
-    animation: cursorhover 1s infinite alternate;
-}
-
-@keyframes cursorhover {
-    from {
-        transform-origin: 100% 100%;
-        transform: scale(1.5);
-    }
-    to {
-        transform-origin: 100% 100%;
-        transform: scale(2);
-    }
+    display: none;
 }
 
 .clip__circle {
@@ -322,6 +288,46 @@ header {
 }
 
 @media only screen and (min-width: 57rem) {
+
+    .cursor {
+        display: block;
+        width: 15px;
+        height: 15px;
+        border: 2px solid white;
+        border-radius: 50%;
+        box-shadow: inset 0 0 0.25em white, 0 0 0.25em white;
+        position: fixed;
+        z-index: 100;
+        transform-origin: 100% 100%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+    }
+    
+    .hover {
+        background-color: transparent;
+        border: 2px solid var(--clr-accent);
+        box-shadow: inset 0 0 0.25em var(--clr-accent), 0 0 0.25em var(--clr-accent);
+        animation: cursorhover 1s infinite alternate;
+    }
+    
+    .hover__on__accent {
+        border: 2px solid var(--clr-primary);
+        transform: translate(-50%, -50%);
+        box-shadow: inset 0 0 0.25em var(--clr-primary), 0 0 0.25em var(--clr-primary);
+        animation: cursorhover 1s infinite alternate;
+    }
+    
+    @keyframes cursorhover {
+        from {
+            transform-origin: 100% 100%;
+            transform: scale(1.5);
+        }
+        to {
+            transform-origin: 100% 100%;
+            transform: scale(2);
+        }
+    }
+
     header {
         justify-content: space-around;
     }
