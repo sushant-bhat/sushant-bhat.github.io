@@ -1,3 +1,7 @@
+main {
+    min-height: 100dvh;
+}
+
 #hero__section {
     display: grid;
     justify-items: center;
