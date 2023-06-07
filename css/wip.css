@@ -1,45 +1,64 @@
 @import "style.css";
 
-#wip {
-    width: 70%;
-    margin: auto;
-}
-
-#wip__title {
-    text-align: center;
-    margin-top: 5rem;
-    color: var(--clr-sec);
+.wip__list {
+    display: grid;
+    justify-items: center;
 }
 
 .wip__item {
-    min-height: 100vh;
+    min-height: 100dvh;
+    max-width: 31rem;
     text-align: center;
     border-radius: 2rem;
     padding: 1em;
     transition: transform 800ms ease;
 }
 
+.wip__item img {
+    border-radius: 1em;
+}
+
+
+.wip__title {
+    font-size: 3rem;
+}
+
+.wip__desc p {
+    font-size:  0.8rem;
+    line-height: 2;
+    max-width: 60ch;
+    padding-inline: 2em;
+    padding-block: 1em;
+}
+
+.wip__desc span {
+    font-size: 1rem;
+    display: inline-block;
+}
+
 @media only screen and (min-width: 53rem) {
+    #wip {
+        width: 70%;
+        margin-inline: auto;
+    }
+
     .wip__item {
         display: grid;
+        max-width: none;
         align-items: center;
         gap: 1rem;
         grid-template-columns: 1fr 1fr;
         position: relative;
     }
 
-    .wip__item img {
-        border: 2px solid var(--clr-accent);
-    }
-
-    .wip__desc h3 {
-        font-size: clamp(1rem, 3vw, 6rem);;
+    .wip__title {
+        font-size: clamp(1rem, 3vw, 6rem);
         transform: translateX(-100%);
         opacity: 0;
         transition: transform 500ms ease-in-out, opacity 200ms ease-in-out 300ms;
     }
 
-    .wip__desc h3.show {
+    .wip__title.show {
         transform: translateX(0);
         opacity: 1;
     }
@@ -61,6 +80,7 @@
     }
 
     .wip__desc span {
+        font-size: clamp(0.8rem, 1vw, 4rem);
         display: inline-block;
         transform: scale(0);
         opacity: 0;

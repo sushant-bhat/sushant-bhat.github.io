@@ -44,9 +44,6 @@
     margin-left: auto;
 }
 
-.project__desc a > img {
-}
-
 @media (min-width: 57rem) {
     .project__img,
     .project__img-right {
