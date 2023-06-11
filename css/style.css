@@ -299,30 +299,29 @@ header {
         position: fixed;
         z-index: 100;
         transform: translate(-50%, -50%);
-        transform-origin: 100% 100%;
         pointer-events: none;
     }
     
     .hover {
         background-color: transparent;
         border-color: var(--clr-accent);
+        transform-origin: 0 0;
+        scale: 1.5;
         box-shadow: inset 0 0 0.25em var(--clr-accent), 0 0 0.25em var(--clr-accent);
         animation: cursorhover 1s infinite alternate;
     }
     
     .hover__on__accent {
         border: 2px solid var(--clr-primary);
-        transform: translate(-50%, -50%);
+        transform-origin: 0 0;
+        scale: 1.5;
         box-shadow: inset 0 0 0.25em var(--clr-primary), 0 0 0.25em var(--clr-primary);
         animation: cursorhover 1s infinite alternate;
     }
     
     @keyframes cursorhover {
-        from {
-            transform: scale(1.5, 1.5);
-        }
         to {
-            transform: scale(2, 2);
+            scale: 2;
         }
     }
 
