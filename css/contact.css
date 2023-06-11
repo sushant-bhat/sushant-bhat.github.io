@@ -82,10 +82,10 @@ main {
     gap: 1rem;
     justify-content: space-evenly;
 }
-
+/* 
 .media__links img {
     width: 75%;
-}
+} */
 
 .media__links > a {
     text-align: center;
