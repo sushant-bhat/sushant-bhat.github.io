@@ -69,6 +69,7 @@ main {
     border: none;
     border-radius: 0.5em;
     background-color: var(--clr-accent);
+    font-weight: bold;
 }
 
 #media__section {
@@ -82,10 +83,6 @@ main {
     gap: 1rem;
     justify-content: space-evenly;
 }
-/* 
-.media__links img {
-    width: 75%;
-} */
 
 .media__links > a {
     text-align: center;

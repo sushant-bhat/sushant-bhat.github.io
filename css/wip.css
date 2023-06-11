@@ -31,11 +31,6 @@
     padding-block: 1em;
 }
 
-.wip__desc span {
-    font-size: 1rem;
-    display: inline-block;
-}
-
 @media only screen and (min-width: 53rem) {
     #wip {
         width: 70%;
@@ -79,7 +74,7 @@
         opacity: 1;
     }
 
-    .wip__desc span {
+    .wip__git {
         font-size: clamp(0.8rem, 1vw, 4rem);
         display: inline-block;
         transform: scale(0);
@@ -87,7 +82,7 @@
         transition: all 300ms ease-in-out 800ms;
     }
 
-    .wip__desc span.show {
+    .wip__git.show {
         transform: scale(1);
         opacity: 1;
     }

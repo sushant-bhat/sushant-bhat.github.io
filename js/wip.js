@@ -16,7 +16,7 @@ wipDescPara.forEach(para => {
     observer.observe(para)
 })
 
-let wipDescLinks = document.querySelectorAll('.wip__desc span')
+let wipDescLinks = document.querySelectorAll('.wip__git')
 wipDescLinks.forEach(link => {
     observer.observe(link)
 })

@@ -358,10 +358,11 @@ header {
 /* Footer section */
 
 footer {
+    display: flex;
     position: absolute;
     bottom: 0;
-    text-align: center;
-    margin: auto;
+    gap: 1rem;
+    justify-content: center;
     width: 100%;
 }
 
