@@ -45,6 +45,10 @@
     margin-left: auto;
 }
 
+.project__git {
+    width: clamp(1.5rem, 2vw, 3rem);
+}
+
 @media (min-width: 57rem) {
     .project__img,
     .project__img-right {
